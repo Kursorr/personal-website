@@ -1,0 +1,459 @@
+@import "variables.scss";
+
+// Reset and principal configuration
+body, h1, h2, h3, h4, h5, h6, ul, li, a, span, p {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+li a, p a, h1 a, h2 a, div a {
+  text-decoration: none;
+  color: $black;
+}
+
+html, body {
+  font-family: 'latoregular', Arial, Helvetica, sans-serif;
+  height: 100%;
+  color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+body {
+  background: #fbfbfb;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.outContent {
+  display: flex;
+  justify-content: center;
+  border: solid black 1px;
+}
+
+.content {
+  width: 100vw;
+  max-width: 1000px;
+  border-left: solid red 1px;
+  border-right: solid red 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content.row {
+  flex-direction: row;
+}
+
+.outContent.menu {
+  background-color: #3B96CD;
+  height: 45px;
+}
+
+
+// Header
+
+div.header {
+  border-bottom: solid #E59A58 1px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  background: #FFF;
+
+  div.logo {
+    height: 61px;
+    width: 100px;
+    border: solid red 1px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-grow: 1;
+
+    ul {
+      width: 25vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 1px;
+
+      li {
+        &:hover {
+          cursor: pointer;
+          border-bottom: solid $hover 1px;
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Home Page
+
+div.container {
+  height: 100%;
+
+  div#bigImg {
+    height: 100%;
+    background: url(../img/background.jpg) 100% -10% no-repeat;
+    background-size: cover;
+
+    div#overlay {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+
+      div#myself {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-size: 42px;
+          color: #fff;
+          text-transform: uppercase;
+          margin-top: 30px;
+          text-align: center;
+        }
+
+        h2 {
+          color: #fff;
+          font-size: 40px;
+          text-transform: uppercase;
+        }
+
+        .animated.infinite {
+          animation-iteration-count: infinite;
+        }
+
+        .pulse {
+          animation-name: pulse;
+        }
+
+        .animated {
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+
+        @keyframes pulse {
+          0% {
+            transform: scaleX(1);
+          }
+          50% {
+            transform: scale3d(1.05, 1.05, 1.05);
+          }
+          100% {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* About me page */
+// Presentation
+.container {
+  h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  div#prensentation {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+
+    div.circle {
+      height: 240px;
+      width: 240px;
+      border: solid #000 1px;
+      border-radius: 50%;
+    }
+
+    p {
+      width: 42%;
+      line-height: 32px;
+      text-align: justify;
+      padding-left: 25px;
+    }
+  }
+}
+
+
+// Skill section
+
+section#skills {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  div.webdesign {
+    background-image: url('../img/spritesheet.png');
+    background-position: 0 -168px;
+  }
+
+  div.frontend {
+    background-image: url('../img/spritesheet.png');
+    background-position: -84px -84px;
+  }
+
+  div.backend {
+    background-image: url('../img/spritesheet.png');
+    background-position: -84px 0;
+  }
+
+  div.best-practice {
+    background-image: url('../img/spritesheet.png');
+    background-position: 0 -84px;
+  }
+
+  section.skill {
+    display: flex;
+    width: 453px;
+    flex-wrap: wrap;
+
+    div {
+      height: 84px;
+      width: 84px;
+      margin-right: 15px;
+    }
+
+    section.text {
+      width: 70%;
+      line-height: 25px;
+
+      h2 {
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      section.competences {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        div.capacity {
+          text-align: center;
+          color: #fff;
+          padding: 0 7px;
+          background-color: #e59a58;
+          border-radius: 4px;
+          margin-top: 2px;
+          margin-right: 10px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
+
+// Exp and Graduation Section
+
+section#exp-and-graduation {
+  display: flex;
+  margin: 50px 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  // media query here
+
+  section#experiences > h1, section#graduates > h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  section#experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 430px;
+    border: solid $black 1px;
+    border-radius: 4px;
+
+    @media only screen and (max-width: $lg-breakpoint) {
+      margin-bottom: 40px;
+    }
+
+    section.exp {
+      line-height: 20px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+
+      span.business {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      span.job {
+        font-size: 15px;
+        font-style: italic;
+      }
+
+      span.date {
+        font-size: 12px;
+      }
+
+      span.school {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      span.g {
+        font-size: 14px;
+        font-style: italic;
+      }
+
+      span.year {
+        font-weight: bold;
+      }
+    }
+  }
+
+  section#graduates {
+    border: solid $black 1px;
+    position: relative;
+    width: 430px;
+    padding-bottom: 20px;
+
+    div.dipl {
+      position: absolute;
+      height: 84px;
+      width: 84px;
+      right: -34px;
+      top: -47px;
+      background-image: url('../img/spritesheet.png');
+      background-position: -84px -168px;
+    }
+
+    section.graduate {
+      line-height: 20px;
+      text-align: center;
+
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+
+// Footer
+
+#footer {
+  background-color: $black;
+
+  #network {
+    display: flex;
+    justify-content: center;
+
+    a {
+      display: block;
+      height: 48px;
+      width: 48px;
+      margin: 15px;
+    }
+
+    #linkedin {
+      background: url(../img/spritesheet.png) -48px -252px;
+      &:hover {
+        background: url(../img/spritesheet.png) -48px -300px;
+      }
+    }
+
+    #github {
+      background: url(../img/spritesheet.png) 0 -252px;
+      &:hover {
+        background: url(../img/spritesheet.png) 0 -300px;
+      }
+    }
+
+    #twitter {
+      background: url(../img/spritesheet.png) -96px -252px;
+      &:hover {
+        background: url(../img/spritesheet.png) -96px -300px;
+      }
+    }
+  }
+
+  p {
+    color: $white;
+    margin: 0 auto;
+  }
+}
+
+
+// Global Items
+// button and input
+
+a.btn, input.btn {
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  font-size: 14px;
+  background: $yellow;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  border: none;
+
+  &:hover {
+    background-color: #E57758;
+  }
+}
+
+// Initials
+
+span.initials {
+  color: $yellow;
+}
+
+// hr
+
+hr.out {
+  width: 250px;
+  border: solid #e59a58 1px;
+}
+
+
+// Router
+
+li.router-link-exact-active {
+  border-bottom: solid $hover 1px;
+  cursor: pointer;
+}
