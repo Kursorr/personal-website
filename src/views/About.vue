@@ -2,7 +2,7 @@
   <div class="container">
     <h1><span class="initials">s</span>enechal <span class="initials">m</span>axime</h1>
 
-    <hr class="out">
+    <hr class="name">
 
     <div id="aboutMe">
       <div class="outContent">
@@ -16,7 +16,7 @@
             </p>
           </div>
 
-          <hr class="out">
+          <hr class="in">
 
           <section id="skills">
             <section class="skill">
@@ -108,20 +108,29 @@
             </section>
           </section>
 
-          <hr class="out">
+          <hr class="in">
 
           <section id="exp-and-graduation">
             <section id="experiences">
               <h1>Expérience</h1>
               <hr class="inside">
               <section class="exp">
-                <p><span class="business">YachtSupply</span> - <span class="job">Développeur web</span><br><span class="date">de juillet à octobre 2017</span></p>
+                <p><span class="business">Traveljuice</span> - <span class="job">Développeur Front-end</span><br><span
+                  class="date">de décembre 2017 à aujourd'hui - 1 an 7 mois</span></p>
               </section>
               <section class="exp">
-                <p><span class="business">NETexcom</span> - <span class="job">Développeur web & mobile</span><br><span class="date">de juillet à novembre 2016</span></p>
+                <p><span class="business">YachtSupply</span> - <span class="job">Développeur FullStack</span><br><span
+                  class="date">de juillet à septembre 2017 - 3 mois</span></p>
               </section>
               <section class="exp">
-                <p><span class="business">YachtSupply</span> - <span class="job">Développeur web</span><br><span class="date">de juillet à novembre 2015</span></p>
+                <p><span class="business">NETexcom</span> - <span class="job">Développeur web &
+                  mobile</span><br><span class="date">de juillet à octobre 2016 - 4 mois</span></p>
+              </section>
+
+              <section class="exp">
+                <p><span class="business">What's Up Informatique</span> - <span class="job">Développeur
+                  web</span><br><span
+                  class="date">de juillet à octobre 2015 - 4 mois</span></p>
               </section>
             </section>
 
@@ -140,19 +149,13 @@
         </div>
       </div>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator';
-  import Footer from '../components/Footer.vue'
 
-  @Component({
-    components: {
-      Footer
-    }
-  })
+  @Component
   export default class About extends Vue {
   }
 </script>

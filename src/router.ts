@@ -24,12 +24,17 @@ export default new Router({
     {
       path: '/projects',
       name: 'projects',
-      component: () => import(/* webpackChunkName: "about" */ './views/Projects.vue')
+      component: () => import(/* webpackChunkName: "projects" */ './views/Projects.vue')
+    },
+    {
+      path: '/project/statics-websites',
+      name: 'project',
+      component: () => import(/* webpackChunkName: "project" */ './views/Project.vue')
     },
     {
       path: '/contact',
       name: 'contact',
-      component: () => import(/* webpackChunkName: "about" */ './views/Contact.vue')
+      component: () => import(/* webpackChunkName: "contact" */ './views/Contact.vue')
     }
   ]
 })

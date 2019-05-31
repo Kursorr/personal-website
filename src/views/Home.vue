@@ -8,7 +8,7 @@
 
     <h1>{{ $t("hello") }}</h1>-->
 
-  <div class="container">
+  <div class="container home">
     <div id="bigImg">
       <div id="overlay">
         <div id="myself">
@@ -16,7 +16,7 @@
             <span class="initials">s</span>enechal - <span class="initials">m</span>axime
           </h1>
           <h2>développeur web</h2>
-          <a class="btn animated infinite pulse" href="/projects">Regardez mes projets</a>
+          <router-link to="/projects" tag="a" class="btn animated infinite pulse">Regardez mes projets</router-link>
         </div>
       </div>
     </div>
@@ -27,13 +27,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Footer from '../components/Footer.vue'
 
-@Component({
-  components: {
-    Footer
-  }
-})
+@Component
 export default class Home extends Vue {
   langs = ['fr', 'en']
 }

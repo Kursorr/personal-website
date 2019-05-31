@@ -16,14 +16,21 @@
       </div>
     </div>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts">
+  import Footer from '@/components/Footer.vue'
+
   require('../public/style/styles.scss')
   import { Component, Vue } from 'vue-property-decorator';
 
-  @Component
+  @Component({
+    components: {
+      Footer
+    }
+  })
   export default class App extends Vue {
   }
 </script>
