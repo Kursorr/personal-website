@@ -15,7 +15,14 @@
     <div class="outContent">
       <div class="content">
         <section class="infos">
-          Infos ...
+          <h1>Voici mes premièrs sites statiques réalisés en HTML / CSS et JS.</h1>
+          <div class="imgs">
+            <div id="first"></div>
+            <div id="second"></div>
+            <div id="third"></div>
+            <div id="four"></div>
+            <div id="fourth"></div>
+          </div>
         </section>
       </div>
     </div>

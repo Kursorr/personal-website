@@ -35,10 +35,13 @@
               +33 6 95 57 75 62<br>
             </p>
           </section>
-          <form method="POST" id="submitForm">
-            <input class="input" type="text" placeholder="Nom & Prénom" name="nameAndSurname" id="nameAndSurname" autocomplete="off" required>
-            <input class="input" type="email" placeholder="Email" name="email" id="email" autocomplete="off" required>
-            <textarea class="input" id="msgInput" cols="30" rows="10" placeholder="Message" name="message" autocomplete="off" required></textarea>
+          <form method="POST" id="submitForm" @submit.prevent="sendData()">
+            <input class="input" type="text" placeholder="Nom & Prénom" name="nameAndSurname" id="nameAndSurname"
+                   autocomplete="off" required v-model="form.name">
+            <input class="input" type="email" placeholder="Email" name="email" id="email" autocomplete="off" required
+                   v-model="form.email">
+            <textarea class="input" id="msgInput" cols="30" rows="10" placeholder="Message" name="message"
+                      autocomplete="off" required v-model="form.message"></textarea>
             <div class="g-recaptcha" data-sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></div>
             <vue-recaptcha sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></vue-recaptcha>
             <input class="btn" type="submit" value="Envoyé">
@@ -52,7 +55,7 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import VueRecaptcha from 'vue-recaptcha';
+  import VueRecaptcha from 'vue-recaptcha'
 
   @Component({
     components: {
@@ -60,6 +63,12 @@
     }
   })
   export default class Contact extends Vue {
+    form: any = {
+      name: '',
+      email: '',
+      message: ''
+    }
+
     data: any = {
       center: {
         lat: 43.5756,
@@ -76,6 +85,19 @@
           lng: 7.000520000000051
         }
       }]
+    }
+
+    sendData() {
+      console.log(this.form)
+      /*this.$http.post('/contact', {
+        data: this.form
+      }).then((result: any) => {
+        console.log(result)
+      })*/
+
+      this.$axios.post('http://localhost:3000/contact',{ params: { data: this.form}})
+        .then(response => this.responseData = response.data)
+        .catch(error => {});
     }
   }
 </script>

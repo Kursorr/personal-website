@@ -7,7 +7,6 @@ module.exports = {
       enableInSFC: true
     }
   },
-
   runtimeCompiler: true,
   productionSourceMap: false
 }

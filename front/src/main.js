@@ -5,6 +5,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import i18n from './i18n';
+import axios from 'axios';
 // @ts-ignore
 import * as VueGoogleMaps from 'vue2-google-maps';
 Vue.use(VueGoogleMaps, {
@@ -14,6 +15,8 @@ Vue.use(VueGoogleMaps, {
     }
 });
 Vue.config.productionTip = false;
+axios.defaults.baseURL = 'localhost:3000';
+Vue.prototype.$axios = axios;
 const requireComponent = require.context('./components', false, /Base[A-Z]\w+\.(vue|js)$/);
 requireComponent.keys().forEach(fileName => {
     const componentConfig = requireComponent(fileName);

@@ -624,7 +624,31 @@ div.container.projects {
   }
 
   .infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    h1 {
+      width: 450px;
+    }
+
+    .imgs {
+      #first {
+        background-image: url('../img/project/statics/beautybio.png');
+      }
+      #second {
+
+      }
+      #third {
+
+      }
+      #four {
+
+      }
+      #fourth {
+
+      }
+    }
   }
 }
 
