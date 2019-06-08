@@ -36,10 +36,18 @@
             </p>
           </section>
           <form method="POST" id="submitForm" @submit.prevent="sendData()">
-            <input class="input" type="text" placeholder="Nom & Prénom" name="nameAndSurname" id="nameAndSurname"
-                   autocomplete="off" required v-model="form.name">
-            <input class="input" type="email" placeholder="Email" name="email" id="email" autocomplete="off" required
-                   v-model="form.email">
+            <label for="name" class="inp">
+              <input type="text" class="input" id="name" placeholder=" " required v-model="form.name"
+                     autocomplete="off">
+              <span class="label">Nom et prénom</span>
+              <span class="border"></span>
+            </label>
+            <label for="email" class="inp" id="emailLabel">
+              <input type="text" class="input" id="email" placeholder=" "  v-model="form.email" autocomplete="off">
+              <span class="label">Email</span>
+              <span class="border"></span>
+            </label>
+
             <textarea class="input" id="msgInput" cols="30" rows="10" placeholder="Message" name="message"
                       autocomplete="off" required v-model="form.message"></textarea>
             <div class="g-recaptcha" data-sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></div>

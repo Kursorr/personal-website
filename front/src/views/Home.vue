@@ -13,9 +13,12 @@
       <div id="overlay">
         <div id="myself">
           <h1>
-            <span class="initials">s</span>enechal - <span class="initials">m</span>axime
+            <span class="initials home">m</span>
+            <p class="noup">axime</p>
+            <span class="initials home s">s</span>
+            <p>enechal</p>
           </h1>
-          <h2>développeur web</h2>
+          <h2>développeur fullstack <br />freelance</h2>
           <router-link to="/projects" tag="a" class="btn animated infinite pulse">Regardez mes projets</router-link>
         </div>
       </div>

@@ -10,10 +10,13 @@
           <div id="prensentation">
             <div class="circle">
             </div>
-            <p>
-              Après avoir effectué un Baccalauréat Professionnel en Comptabilité, je me suis directement orienté dans l'informatique, et plus précisément dans le développement de sites internet. C'est pourquoi j'ai rejoins SUPINFO pendant 3 ans.
-              Depuis ce temps-là, j'ai quelques projets à mon actif, que ce soit du simple site web statique/dynamique au logiciel. Tel que mon très gros projet : Reproduire Discord, qui est en cours de création. Pour terminer : Je suis un grand adepte de NodeJS !
-            </p>
+            <div id="all">
+              <h1>Vous cherchez un développeur web ?</h1>
+              <p>
+                Vous êtes au bon endroit !<br/>
+                Je m'appelle Maxime Senechal, j'ai commencé le développement web depuis 3 ans maintenant. J'ai quelques projets à mon actif, que ce soit du simple site web statique/dynamique au logiciel, tel que mon très gros projet qui est de reproduire Discord.
+              </p>
+            </div>
           </div>
 
           <hr class="in">
@@ -56,13 +59,10 @@
                     <span>javascript</span>
                   </div>
                   <div class="capacity">
-                    <span>vuejs</span>
+                    <span>vuejs 3</span>
                   </div>
                   <div class="capacity">
-                    <span>reactjs</span>
-                  </div>
-                  <div class="capacity">
-                    <span>angularjs</span>
+                    <span>angular 7</span>
                   </div>
                 </section>
               </section>
