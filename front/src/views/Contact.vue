@@ -37,19 +37,23 @@
           </section>
           <form method="POST" id="submitForm" @submit.prevent="sendData()">
             <label for="name" class="inp">
-              <input type="text" class="input" id="name" placeholder=" " required v-model="form.name"
-                     autocomplete="off">
+              <input type="text" class="input" id="name" placeholder=" " required v-model="form.name" autocomplete="off">
               <span class="label">Nom et prénom</span>
               <span class="border"></span>
             </label>
+
             <label for="email" class="inp" id="emailLabel">
-              <input type="text" class="input" id="email" placeholder=" "  v-model="form.email" autocomplete="off">
+              <input type="text" class="input" id="email" placeholder=" " required v-model="form.email" autocomplete="off">
               <span class="label">Email</span>
               <span class="border"></span>
             </label>
 
-            <textarea class="input" id="msgInput" cols="30" rows="10" placeholder="Message" name="message"
-                      autocomplete="off" required v-model="form.message"></textarea>
+            <label for="message" class="inp" id="messageLabel">
+              <textarea id="msgInput" cols="30" rows="10" autocomplete="off" required v-model="form.message" placeholder=" "></textarea>
+              <span class="label">Votre message</span>
+              <span class="border area"></span>
+            </label>
+
             <div class="g-recaptcha" data-sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></div>
             <vue-recaptcha sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></vue-recaptcha>
             <input class="btn" type="submit" value="Envoyé">
@@ -71,13 +75,13 @@
     }
   })
   export default class Contact extends Vue {
-    form: any = {
+    private form: any = {
       name: '',
       email: '',
       message: ''
     }
 
-    data: any = {
+    private data: any = {
       center: {
         lat: 43.5756,
         lng: 7.000520000000051
@@ -95,17 +99,16 @@
       }]
     }
 
-    sendData() {
+    public sendData() {
       console.log(this.form)
-      /*this.$http.post('/contact', {
-        data: this.form
-      }).then((result: any) => {
-        console.log(result)
-      })*/
 
-      this.$axios.post('http://localhost:3000/contact',{ params: { data: this.form}})
-        .then(response => this.responseData = response.data)
-        .catch(error => {});
+      this.$axios.post('http://localhost:3000/contact', { params: { data: this.form}})
+        .then((response: any) => response.data)
+        .catch((error: any) => {})
+    }
+
+    test() {
+      console.log('clicked')
     }
   }
 </script>

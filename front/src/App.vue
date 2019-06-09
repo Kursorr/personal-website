@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="darker">
     <div class="header">
       <div class="outContent">
         <div class="content row">
@@ -21,10 +21,9 @@
 </template>
 
 <script lang="ts">
-  import Footer from '@/components/Footer.vue'
-
   require('../public/style/styles.scss')
 
+  import Footer from '@/components/Footer.vue'
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component({

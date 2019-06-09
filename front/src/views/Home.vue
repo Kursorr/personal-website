@@ -33,6 +33,6 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Home extends Vue {
-  langs = ['fr', 'en']
+  public langs = ['fr', 'en']
 }
 </script>

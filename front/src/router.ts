@@ -14,6 +14,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '*',
+      name: 'error',
+      component: () => import(/* webpackChunkName: "about" */ './views/NotFound.vue')
+    },
+    {
       path: '/about',
       name: 'about',
       // route level code-splitting

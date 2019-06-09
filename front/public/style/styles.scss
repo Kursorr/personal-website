@@ -62,47 +62,53 @@ h2 {
 
 // Header
 
-div.header {
-  border-bottom: solid #E59A58 1px;
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  background: #FFF;
-  z-index: 2;
-
-  div.content.row {
-    justify-content: space-between;
-  }
-
-  div.logo {
-    height: 61px;
-    width: 100px;
-  }
-
-  #menu-toggle {display: none;}
-  .label-toggle {display: none;}
-
-  ul {
-    width: 50%;
+div#app.darker {
+  div.header {
+    border-bottom: solid #E59A58 1px;
+    height: 60px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    letter-spacing: 1px;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: rgba(42, 42, 42, 0.9);
+    color: #7f7f7f;
 
-    li {
-      margin-bottom: 1px;
-
-      &:hover {
-        cursor: pointer;
-        border-bottom: solid $hover 1px;
-      }
+    div.content.row {
+      justify-content: space-between;
     }
 
-    span {
-      text-transform: uppercase;
+    div.logo {
+      height: 61px;
+      width: 100px;
+    }
+
+    #menu-toggle {display: none;}
+    .label-toggle {display: none;}
+
+    ul {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 1px;
+
+      li {
+        margin-bottom: 1px;
+        font-size: 12px;
+
+        &:hover {
+          cursor: pointer;
+          border-bottom: solid $hover 1px;
+          color: $white;
+          transition: color 0.3s ease;
+        }
+      }
+
+      span {
+        text-transform: uppercase;
+      }
     }
   }
 }
@@ -153,7 +159,7 @@ div.container.home {
 
   div#bigImg {
     height: 100%;
-    background: url(../img/background.jpg) 100% -10% no-repeat;
+    background: url(../img/background.jpg) 100% 0 no-repeat;
     background-size: cover;
 
     div#overlay {
@@ -251,6 +257,7 @@ div.container.home {
 
       h1 {
         font-size: 16px;
+        margin-bottom: 10px;
       }
     }
 
@@ -486,8 +493,7 @@ section#infoAndForm {
     }
 
     #emailLabel {
-      margin-top: 20px;
-      margin-bottom: 30px;
+      margin: 20px 0;
     }
 
     .border {
@@ -502,7 +508,11 @@ section#infoAndForm {
       transition: all .15s ease;
     }
 
-    input.input {
+    .border.area {
+      bottom: 2px;
+    }
+
+    input.input, textarea {
       -webkit-appearance: none;
       width: 100%;
       border: 0;
@@ -556,7 +566,7 @@ section#infoAndForm {
 /* Portfolio page */
 
 div.container.projects {
-  margin-top: 25px;
+  margin-top: 0;
 
   div.parallax {
     display: flex;
@@ -1021,4 +1031,5 @@ hr.in {
 li.router-link-exact-active {
   border-bottom: solid $hover 1px;
   cursor: pointer;
+  color: $white;
 }
