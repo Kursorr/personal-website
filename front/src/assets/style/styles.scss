@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "variables";
 
 // Reset and principal configuration
 body, h1, h2, h3, h4, h5, h6, ul, li, a, span, p {
@@ -63,90 +63,6 @@ h2 {
 // Header
 
 div#app.darker {
-  div.header {
-    border-bottom: solid #E59A58 1px;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    background-color: rgba(42, 42, 42, 0.9);
-    color: #7f7f7f;
-
-    div.content.row {
-      justify-content: space-between;
-    }
-
-    div.logo {
-      height: 61px;
-      width: 100px;
-    }
-
-    #menu-toggle {display: none;}
-    .label-toggle {display: none;}
-
-    ul {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      letter-spacing: 1px;
-
-      li {
-        margin-bottom: 1px;
-        font-size: 12px;
-
-        &:hover {
-          cursor: pointer;
-          border-bottom: solid $hover 1px;
-          color: $white;
-          transition: color 0.3s ease;
-        }
-      }
-
-      span {
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $md-breakpoint) {
-  div.header {
-    ul {
-      background-color: red;
-      display: flex;
-      list-style-type: none;
-      opacity: 0;
-      text-align: center;
-      visibility: hidden;
-      position: absolute;
-      height: 50px;
-      top: 70px;
-      width: 100%;
-    }
-  }
-
-  #menu-toggle:checked ~ ul {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .label-toggle {
-    background: linear-gradient(to bottom, red 0%, red 20%, transparent 20%, transparent 40%, red 40%, red 60%, transparent 60%, transparent 80%, red 80%, red 100%); //Gradient Hamburger
-    cursor: pointer;
-    display: block;
-    float: right;
-    height: 35px;
-    margin-top: 1em;
-    width: 35px;
-  }
-
-  div.header .label-toggle {
-    display: block;
-  }
 
 }
 
@@ -780,202 +696,6 @@ div.container.projects {
   }
 }
 
-
-// Footer
-
-#footer {
-  .outContent.network {
-    background-color: $black;
-  }
-
-  #network {
-    display: flex;
-    padding: 15px 0;
-
-    @media screen and (max-width: $lg-breakpoint) {
-      padding: 15px 30px
-    }
-
-    .roundedDiv {
-      height: 46px;
-      width: 46px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      background-color: #383838;
-
-      &:nth-child(2) {
-        margin: 0 15px;
-      }
-
-      &:hover {
-        background-color: $yellow;
-        transition: background-color 0.5s ease;
-      }
-
-      &.github {
-        &:hover {
-          background-color: #6e5494;
-        }
-      }
-
-      &.linkedin {
-        &:hover {
-          background-color: #004b7c;
-        }
-      }
-
-      &.twitter {
-        &:hover {
-          background-color: #55acee;
-        }
-      }
-
-      img {
-        width: 16px;
-      }
-    }
-  }
-
-
-
-  div.outContent.address {
-    background-color: #2a2a2a;
-
-    div#personalInfos {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 30px 0;
-
-      @media screen and (max-width: $lg-breakpoint) {
-        padding: 30px;
-      }
-
-      div#infos {
-        max-width: 500px;
-
-        h1 {
-          text-transform: uppercase;
-          font-size: 14px;
-          letter-spacing: 1px;
-          color: $white;
-          margin-bottom: 15px;
-        }
-
-        hr {
-          width: 276px;
-          margin-left: 0;
-        }
-
-        p {
-          color: #7f7f7f;
-          line-height: 20px;
-
-          ul {
-            margin-top: 10px;
-          }
-        }
-      }
-
-      div#address {
-        display: flex;
-        color: $white;
-        line-height: 20px;
-
-        address {
-          display: flex;
-          flex-direction: column;
-          color: #7f7f7f;
-
-          h1 {
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            color: $white;
-            text-align: center;
-          }
-
-          hr.inside {
-            width: 125px;
-          }
-
-          span#post, a#tel, a#email {
-            margin-bottom: 5px;
-          }
-
-          a {
-            color: #7f7f7f;
-          }
-        }
-      }
-    }
-  }
-
-  div.outContent.copyright {
-    background-color: $black;
-
-    div#footerEnd {
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 0;
-
-      @media screen and (max-width: $lg-breakpoint) {
-        padding: 20px 30px;
-      }
-
-      #legaleNotice {
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-size: 12px;
-
-        a {
-          color: #7f7f7f;
-
-          &:hover {
-            color: $white;
-          }
-        }
-      }
-
-      div#madeWithLove {
-        color: #7f7f7f;
-        letter-spacing: 1px;
-        font-size: 12px;
-
-        .heart {
-          fill: #E90606;
-          top: 5px;
-          width: 10px;
-          animation: heartPulse .35s infinite alternate;
-        }
-
-        @keyframes heartPulse {
-          to {
-            transform: scale(1.1);
-          }
-        }
-
-        a {
-          color: #7f7f7f;
-          &:hover {
-            color: $yellow;
-            cursor: pointer;
-          }
-        }
-      }
-
-      div#copyright {
-        color: #7f7f7f;
-        font-size: 12px;
-      }
-    }
-  }
-
-
-}
-
 // Global Items
 // button and input
 
@@ -984,7 +704,7 @@ a.btn, input.btn {
   text-decoration: none;
   color: $white;
   font-size: 14px;
-  background: $yellow;
+  background-color: $orange;
   padding: 16px;
   border-radius: 4px;
   margin-top: 10px;
@@ -999,7 +719,7 @@ a.btn, input.btn {
 // Initials
 
 span.initials {
-  color: $yellow;
+  color: $orange;
 }
 
 // hr
@@ -1023,13 +743,4 @@ hr.in {
   border: solid #e59a58 1px;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-
-// Router
-
-li.router-link-exact-active {
-  border-bottom: solid $hover 1px;
-  cursor: pointer;
-  color: $white;
 }
