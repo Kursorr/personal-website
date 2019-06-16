@@ -36,3 +36,60 @@
   export default class Project extends Vue {
   }
 </script>
+
+<style lang="scss">
+  .container.project {
+    margin-top: 0;
+
+    div.title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+      height: 100px;
+      background-color: #1b1b1b;
+
+      section.titles {
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        color: #fff;
+
+        h2 {
+          color: #fff;
+          font-size: 24px;
+          text-transform: uppercase;
+          text-align: left;
+        }
+      }
+    }
+
+    .infos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        width: 450px;
+      }
+
+      .imgs {
+        #first {
+          background-image: url('../assets/img/project/statics/beautybio.png');
+        }
+        #second {
+
+        }
+        #third {
+
+        }
+        #four {
+
+        }
+        #fourth {
+
+        }
+      }
+    }
+  }
+</style>

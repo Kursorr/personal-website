@@ -4,13 +4,13 @@
       <div class="content">
         <div id="network">
           <a href="https://github.com/Ravaniss" class="roundedDiv github">
-            <img src="../assets/img/network/github.png" alt="github">
+            <div class="iconSize" id="github"></div>
           </a>
           <a href="https://www.linkedin.com/in/maxime-senechal-088b04a8/#" class="roundedDiv linkedin">
-            <img src="../assets/img/network/linkedin.png" alt="linkedin">
+            <div class="iconSize" id="linkedin"></div>
           </a>
           <a href="https://twitter.com/SENECHAL_Maxime" class="roundedDiv twitter">
-            <img src="../assets/img/network/twitter.png" alt="twitter">
+            <div class="iconSize" id="twitter"></div>
           </a>
         </div>
       </div>
@@ -75,11 +75,18 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
+  import * as Vuex from 'vuex'
+  import store from '../store'
 
-  @Component
-  export default class Footer extends Vue {
-    theme: string = 'darker'
-  }
+  @Component({
+    store,
+    computed: {
+      ...Vuex.mapGetters([
+        'theme'
+      ])
+    }
+  })
+  export default class Footer extends Vue {}
 </script>
 
 <style lang="scss">
@@ -101,7 +108,11 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background-color: #383838;
+
+        .iconSize {
+          height: 16px;
+          width: 16px;
+        }
 
         &:nth-child(2) {
           margin: 0 15px;
@@ -136,21 +147,7 @@
       }
     }
 
-    &.darker {
-      .outContent.network {
-        background-color: $black;
-      }
-    }
-
-    &.lighter {
-      .outContent.network {
-        background-color: $black;
-      }
-    }
-
     div.outContent.address {
-      background-color: #2a2a2a;
-
       div#personalInfos {
         display: flex;
         justify-content: space-between;
@@ -168,7 +165,6 @@
             text-transform: uppercase;
             font-size: 14px;
             letter-spacing: 1px;
-            color: $white;
             margin-bottom: 15px;
           }
 
@@ -201,7 +197,6 @@
               text-transform: uppercase;
               font-size: 14px;
               letter-spacing: 1px;
-              color: $white;
               text-align: center;
             }
 
@@ -222,8 +217,6 @@
     }
 
     div.outContent.copyright {
-      background-color: $black;
-
       div#footerEnd {
         display: flex;
         justify-content: space-between;
@@ -278,6 +271,81 @@
           color: #7f7f7f;
           font-size: 12px;
         }
+      }
+    }
+
+
+    &.darker {
+      .outContent.network {
+        background-color: $black;
+
+        .roundedDiv {
+          background-color: #383838;
+        }
+
+        #github {
+          background: url(../assets/img/network/lighter/github.png) no-repeat;
+          background-size: 16px;
+        }
+
+        #linkedin {
+          background: url(../assets/img/network/lighter/linkedin.png) no-repeat;
+          background-size: 16px;
+        }
+
+        #twitter {
+          background: url(../assets/img/network/lighter/twitter.png) no-repeat;
+          background-size: 16px;
+        }
+      }
+
+      div.outContent.address {
+        background-color: #2A2A2A;
+
+        h1 {
+          color: $white;
+        }
+      }
+
+      div.outContent.copyright {
+        background-color: $black;
+      }
+    }
+
+    &.lighter {
+      .outContent.network {
+        background-color: #CACACA;
+
+        .roundedDiv {
+          background-color: #E1E1E1;
+        }
+
+        #github {
+          background: url(../assets/img/network/darker/github.png) no-repeat;
+          background-size: 16px;
+        }
+
+        #linkedin {
+          background: url(../assets/img/network/darker/linkedin.png) no-repeat;
+          background-size: 16px;
+        }
+
+        #twitter {
+          background: url(../assets/img/network/darker/twitter.png) no-repeat;
+          background-size: 16px;
+        }
+      }
+
+      div.outContent.address {
+        background-color: #E1E1E1;
+
+        h1 {
+          color: $black;
+        }
+      }
+
+      div.outContent.copyright {
+        background-color: #CACACA;
       }
     }
   }

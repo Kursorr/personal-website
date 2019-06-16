@@ -112,3 +112,131 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .contact-error {
+    color: #9c1920;
+  }
+
+  .contact-success {
+    color: #35a026;
+  }
+
+  .container.contact {
+    margin-top: 60px;
+  }
+
+  section#message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-bottom: solid #e59a58 1px;
+    }
+  }
+
+  section#infoAndForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .inp {
+        position: relative;
+        margin: auto;
+        width: 100%;
+      }
+
+      .label {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        font-size: 16px;
+        color: #9098A9;
+        font-weight: 500;
+        transform-origin: 0 0;
+        transition: all .2s ease;
+      }
+
+      #emailLabel {
+        margin: 20px 0;
+      }
+
+      .border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: #0077FF;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all .15s ease;
+      }
+
+      .border.area {
+        bottom: 2px;
+      }
+
+      input.input, textarea {
+        -webkit-appearance: none;
+        width: 100%;
+        border: 0;
+        font-family: inherit;
+        padding: 12px 0;
+        height: 48px;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 2px solid #C8CCD4;
+        background: none;
+        border-radius: 0;
+        color: #223254;
+        transition: all .15s ease;
+
+        &:hover {
+          background: rgba(#223254, .03)
+        }
+
+        &:not(:placeholder-shown) + span {
+          color: #5A667F;
+          transform: translateY(-26px) scale(.75);
+        }
+
+        &:focus {
+          background: none;
+          outline: none;
+
+          + span {
+            color: #0077FF;
+            transform: translateY(-26px) scale(.75);
+
+            + .border {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+
+    section#informations {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      p#address {
+        margin-top: 15px;
+      }
+    }
+  }
+</style>
