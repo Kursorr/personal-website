@@ -2,7 +2,7 @@
   <div class="container projects">
     <section class="skills">
       <div class="parallax">
-        <h2><span class="initials">P</span>rojets</h2>
+        <h2><span class="initials">P</span>{{ $t('project-title') }}</h2>
       </div>
     </section>
 
