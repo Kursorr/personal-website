@@ -19,10 +19,10 @@
     <div class="outContent">
       <div class="content">
         <section id="message">
-          <h2>Intéressé par mon profil ?</h2>
+          <h2>{{ $t('contact-title') }}</h2>
           <p>
-            N'hésitez pas à me contacter directement ou,<br>
-            laissez moi un message et je vous recontacterai directement !
+            {{ $t('contact-text') }}<br>
+            {{ $t('contact-text2') }}
           </p>
         </section>
 
@@ -38,19 +38,19 @@
           <form method="POST" id="submitForm" @submit.prevent="sendData()">
             <label for="name" class="inp">
               <input type="text" class="input" id="name" placeholder=" " required v-model="form.name" autocomplete="off">
-              <span class="label">Nom et prénom</span>
+              <span class="label">{{ $t('contact-name-surname') }}</span>
               <span class="border"></span>
             </label>
 
             <label for="email" class="inp" id="emailLabel">
               <input type="text" class="input" id="email" placeholder=" " required v-model="form.email" autocomplete="off">
-              <span class="label">Email</span>
+              <span class="label">{{ $t('contact-email') }}</span>
               <span class="border"></span>
             </label>
 
             <label for="message" class="inp" id="messageLabel">
               <textarea id="msgInput" cols="30" rows="10" autocomplete="off" required v-model="form.message" placeholder=" "></textarea>
-              <span class="label">Votre message</span>
+              <span class="label">{{ $t('contact-msg') }}</span>
               <span class="border area"></span>
             </label>
 
