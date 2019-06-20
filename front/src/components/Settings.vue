@@ -5,19 +5,24 @@
         <img src="../assets/img/settings.svg" alt="settings">
       </a>
 
-      <strong class="title">style switcher</strong>
-      <strong class="subtitle">style theme</strong>
+      <strong class="title">{{ $t('settings-style-title') }}</strong>
+      <strong class="subtitle">{{ $t('settings-style-subtitle') }}</strong>
 
       <ul class="list-inline list-style list-bg-color">
         <li class="dark">
-          <a class="settingsBtn" @click="setDarker()">dark</a>
+          <a class="settingsBtn" @click="setDarker()">
+            {{ $t('settings-style-dark') }}
+          </a>
         </li>
         <li class="light">
-          <a class="settingsBtn" @click="setLigther()">light</a>
+          <a class="settingsBtn" @click="setLigther()">
+            {{ $t('settings-style-light') }}
+          </a>
         </li>
       </ul>
 
-      <strong class="subtitle">language</strong>
+      <strong class="title">{{ $t('settings-lang-title') }}</strong>
+      <strong class="subtitle">{{ $t('settings-lang-subtitle') }}</strong>
       <div class="locale-changer">
         <select v-model="$i18n.locale">
           <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
@@ -112,8 +117,7 @@
 
     .list-style {
       margin: 0 0 14px;
-      padding: 0 0 19px;
-      border-bottom: 1px solid #EEE;
+      padding: 0 0 10px;
 
       li {
         padding: 0 5px 0 2px;

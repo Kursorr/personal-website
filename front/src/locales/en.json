@@ -42,5 +42,11 @@
   "project-title": "rojects",
   "project-type1": "Website creation",
   "project-type2": "Specific development",
-  "project-type3": "Web application"
+  "project-type3": "Web application",
+  "settings-lang-subtitle": "language",
+  "settings-lang-title": "language switcher",
+  "settings-style-dark": "dark",
+  "settings-style-light": "light",
+  "settings-style-subtitle": "style theme",
+  "settings-style-title": "style switcher"
 }
