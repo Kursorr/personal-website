@@ -305,7 +305,6 @@
 
         section.competences {
           display: flex;
-          flex-wrap: wrap;
 
           div.capacity {
             text-align: center;
