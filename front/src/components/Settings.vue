@@ -16,6 +16,14 @@
           <a class="settingsBtn" @click="setLigther()">light</a>
         </li>
       </ul>
+
+      <strong class="subtitle">language</strong>
+      <div class="locale-changer">
+        <select v-model="$i18n.locale">
+          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+        </select>
+      </div>
+
     </div>
   </div>
 </template>
@@ -40,6 +48,7 @@
     }
   })
   export default class Settings extends Vue {
+    public langs = ['fr', 'en']
     isActive: string = 'disabled'
 
     public toggle() {
