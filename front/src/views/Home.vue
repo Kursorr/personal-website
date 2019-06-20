@@ -1,13 +1,4 @@
 <template>
-  <!--<div class="home">
-    <div class="locale-changer">
-      <select v-model="$i18n.locale">
-        <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
-      </select>
-    </div>
-
-    <h1>{{ $t("hello") }}</h1>-->
-
   <div class="container home">
     <div id="bigImg">
       <div id="overlay">
@@ -17,9 +8,16 @@
             <p class="noup">axime</p>
             <span class="initials home s">s</span>
             <p>enechal</p>
+            <div class="locale-changer">
+              <select v-model="$i18n.locale">
+                <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+              </select>
+            </div>
           </h1>
-          <h2>développeur fullstack <br />freelance</h2>
-          <router-link to="/projects" tag="a" class="btn animated infinite pulse">Regardez mes projets</router-link>
+          <h2>{{ $t('home-title') }} <br />freelance</h2>
+          <router-link to="/projects" tag="a" class="btn animated infinite pulse">
+            {{ $t('home-projects') }}
+          </router-link>
         </div>
       </div>
     </div>
