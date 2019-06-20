@@ -20,15 +20,14 @@
       <div class="content">
         <div id="personalInfos">
           <div id="infos">
-            <h1>Développeur front & back-end</h1>
+            <h1>{{ $t('footer-title') }}</h1>
             <hr class="inside">
             <p>
-              Passionné par les technologies du web depuis 3 ans, je souhaite utiliser cette passion au service de vos besoins.
-              C'est pourquoi je suis à votre disposition pour répondre à tout type de projets:
+              {{ $t('footer-text') }}
               <ul>
-                <li>- Création de sites internet</li>
-                <li>- Développement spécifique</li>
-                <li>- Application web</li>
+                <li>- {{ $t('project-type1') }}</li>
+                <li>- {{ $t('project-type2') }}</li>
+                <li>- {{ $t('project-type3') }}</li>
               </ul>
             </p>
           </div>
@@ -50,7 +49,7 @@
       <div class="content">
         <div id="footerEnd">
           <div id="legaleNotice">
-            <router-link to="">mentions légales</router-link>
+            <router-link to="">{{ $t('legalmentions') }}</router-link>
           </div>
 
           <div id="madeWithLove">
