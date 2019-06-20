@@ -8,7 +8,7 @@
       <strong class="title">{{ $t('settings-style-title') }}</strong>
       <strong class="subtitle">{{ $t('settings-style-subtitle') }}</strong>
 
-      <ul class="list-inline list-style list-bg-color">
+      <ul class="list-style">
         <li class="dark">
           <a class="settingsBtn" @click="setDarker()">
             {{ $t('settings-style-dark') }}
@@ -23,11 +23,20 @@
 
       <strong class="title">{{ $t('settings-lang-title') }}</strong>
       <strong class="subtitle">{{ $t('settings-lang-subtitle') }}</strong>
-      <div class="locale-changer">
-        <select v-model="$i18n.locale">
-          <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
-        </select>
-      </div>
+
+      <ul class="list-lang">
+        <li class="flag"
+            :class="frSelected ? 'frSelected': ''"
+            id="fr"
+            @click="setFr()"
+        ></li>
+
+        <li class="flag"
+            :class="enSelected ? 'enSelected': ''"
+            id="en"
+            @click="setEn()"
+        ></li>
+      </ul>
 
     </div>
   </div>
@@ -55,9 +64,23 @@
   export default class Settings extends Vue {
     public langs = ['fr', 'en']
     isActive: string = 'disabled'
+    frSelected: boolean = true
+    enSelected: boolean = false
 
     public toggle() {
       this.isActive = this.isActive === '' ? 'disabled' : ''
+    }
+
+    setFr () {
+      this.$i18n.locale = 'fr'
+      this.frSelected = true
+      this.enSelected = false
+    }
+
+    setEn () {
+      this.$i18n.locale = 'en'
+      this.frSelected = false
+      this.enSelected = true
     }
   }
 </script>
@@ -110,14 +133,13 @@
     .subtitle {
       color: #8F8F8F;
       display: block;
-      margin: 0 0 13px;
+      margin-bottom: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     .list-style {
-      margin: 0 0 14px;
-      padding: 0 0 10px;
+      margin-bottom: 20px;
 
       li {
         padding: 0 5px 0 2px;
@@ -136,6 +158,37 @@
         border-radius: 0;
         text-align: center;
         text-transform: uppercase;
+      }
+    }
+
+    .list-lang {
+      display: flex;
+      justify-content: space-around;
+
+      .flag {
+        background-repeat: no-repeat;
+        background-size: 40px;
+        height: 40px;
+        width: 40px;
+        opacity: 0.6;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 1;
+          transition: opacity 150ms linear;
+        }
+      }
+
+      .flag.frSelected, .flag.enSelected {
+        opacity: 1;
+      }
+
+      #fr {
+        background-image: url('../assets/img/flags/fr.svg');
+      }
+
+      #en {
+        background-image: url('../assets/img/flags/en.svg');
       }
     }
 
