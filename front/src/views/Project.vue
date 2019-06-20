@@ -4,9 +4,9 @@
       <div class="outContent">
         <div class="content">
           <section class="titles">
-            <h2>projets web</h2>
-            <h3>Beauty Bio / BlueBand / Diablo 3 / Zozor</h3>
-            <span>Sites vitrines</span>
+            <h2>{{ $t('project-statics-websites-title') }}</h2>
+            <h3>Beauty Bio / BlueBand / Diablo 3 / Zozor & CV</h3>
+            <span>{{ $t('project-statics-websites-subtitle') }}</span>
           </section>
         </div>
       </div>
@@ -15,7 +15,9 @@
     <div class="outContent">
       <div class="content">
         <section class="infos">
-          <h1>Voici mes premièrs sites statiques réalisés en HTML / CSS et JS.</h1>
+          <h1>
+            {{ $t('project-statics-websites-infos-title') }}
+          </h1>
           <div class="imgs">
             <div id="first"></div>
             <div id="second"></div>
