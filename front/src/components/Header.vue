@@ -6,10 +6,18 @@
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="label-toggle"></label>
         <ul>
-          <router-link tag="li" to="/"><span>home</span></router-link>
-          <router-link tag="li" to="/about"><span>à propos</span></router-link>
-          <router-link tag="li" to="/projects"><span>portfolio</span></router-link>
-          <router-link tag="li" to="/contact"><span>contact</span></router-link>
+          <router-link tag="li" to="/">
+            <span>{{ $t('menu-home') }}</span>
+          </router-link>
+          <router-link tag="li" to="/about">
+            <span>{{ $t('menu-about') }}</span>
+          </router-link>
+          <router-link tag="li" to="/projects">
+            <span>{{ $t('menu-portfolio') }}</span>
+          </router-link>
+          <router-link tag="li" to="/contact">
+            <span>{{ $t('menu-contact') }}</span>
+          </router-link>
         </ul>
       </div>
     </div>
