@@ -11,10 +11,10 @@
             <div class="circle">
             </div>
             <div id="all">
-              <h1>Vous cherchez un développeur web ?</h1>
+              <h1>{{ $t('about-title') }}</h1>
               <p>
-                Vous êtes au bon endroit !<br/>
-                Je m'appelle Maxime Senechal, j'ai commencé le développement web depuis 3 ans maintenant. J'ai quelques projets à mon actif, que ce soit du simple site web statique/dynamique au logiciel, tel que mon très gros projet qui est de reproduire Discord.
+                {{ $t('about-rightplace') }}<br/>
+                {{ $t('about-me') }}
               </p>
             </div>
           </div>
@@ -26,7 +26,7 @@
               <div class="webdesign"></div>
               <section class="text">
                 <h2>Webdesign</h2>
-                <p>Je sais créer des maquettes graphiques et construire la structure d'un site web. Je sais ce qui est bien pour l'utilisateur, tant au niveau interface que expérience.</p>
+                <p>{{ $t('about-webdesign-skill-text') }}</p>
                 <section class="competences">
                   <div class="capacity">
                     <span>ui</span>
@@ -35,7 +35,7 @@
                     <span>ux</span>
                   </div>
                   <div class="capacity">
-                    <span>ergonomie</span>
+                    <span>{{ $t('about-webdesign-skill-ergo') }}</span>
                   </div>
                   <div class="capacity">
                     <span>photoshop</span>
@@ -46,14 +46,14 @@
             <section class="skill">
               <div class="frontend"></div>
               <section class="text">
-                <h2>Développement front-end</h2>
-                <p>Intégrer des maquettes web, créer des expériences adaptatives, réaliser des animations, c'est mon coeur de métier.</p>
+                <h2>{{ $t('about-front-end-skill-title') }}</h2>
+                <p>{{ $t('about-front-end-skill-text') }}</p>
                 <section class="competences">
                   <div class="capacity">
-                    <span>html</span>
+                    <span>html5</span>
                   </div>
                   <div class="capacity">
-                    <span>css</span>
+                    <span>css3</span>
                   </div>
                   <div class="capacity">
                     <span>javascript</span>
@@ -70,8 +70,10 @@
             <section class="skill">
               <div class="backend"></div>
               <section class="text">
-                <h2>Développement back-end</h2>
-                <p>De l'idée à la publication de celle-ci, de nombreux facteurs entrent en compte dans la qualité du rendu final. Qu'il s'agisse du choix des outils, des technologies ou encore de leur évolution, c'est tous les éléments qui composent ce processus qui me passionnent.</p>
+                <h2>{{ $t('about-back-end-skill-title') }}</h2>
+                <p>
+                  {{ $t('about-back-end-skill-text') }}
+                </p>
                 <section class="competences">
                   <div class="capacity">
                     <span>nodejs</span>
@@ -88,8 +90,10 @@
             <section class="skill">
               <div class="best-practice"></div>
               <section class="text">
-                <h2>100% Best Practice !</h2>
-                <p>Je suis un fervent défenseur des bonnes pratiques et conventions liées au code. J'apprécie le fait que mon code soit propre et organisé, que les outils utilisés pour créer le soient à bon escient. Pour rester au jus, je fais ma veille technologique tous les matins !</p>
+                <h2>{{ $t('about-best-practice-skill-title') }}</h2>
+                <p>
+                  {{ $t('about-best-practice-skill-text') }}
+                </p>
                 <section class="competences">
                   <div class="capacity">
                     <span>npm</span>
@@ -112,37 +116,80 @@
 
           <section id="exp-and-graduation">
             <section id="experiences">
-              <h1>Expérience</h1>
+              <h1>{{ $t('about-experience') }}</h1>
               <hr class="inside">
               <section class="exp">
-                <p><span class="business">Traveljuice</span> - <span class="job">Développeur Front-end</span><br><span
-                  class="date">de décembre 2017 à aujourd'hui - 1 an 7 mois</span></p>
+                <p>
+                  <span class="business">Traveljuice</span> -
+                  <span class="job">
+                    {{ $t('about-traveljuice-job') }}
+                  </span><br>
+                  <span class="date">
+                    {{ $t('about-traveljuice-date') }}
+                  </span>
+                </p>
               </section>
               <section class="exp">
-                <p><span class="business">YachtSupply</span> - <span class="job">Développeur FullStack</span><br><span
-                  class="date">de juillet à septembre 2017 - 3 mois</span></p>
+                <p>
+                  <span class="business">YachtSupply</span> -
+                  <span class="job">
+                    {{ $t('about-yachtsupply-job') }}
+                  </span><br>
+                  <span class="date">
+                    {{ $t('about-yachtsupply-date') }}
+                  </span>
+                </p>
               </section>
               <section class="exp">
-                <p><span class="business">NETexcom</span> - <span class="job">Développeur web &
-                  mobile</span><br><span class="date">de juillet à octobre 2016 - 4 mois</span></p>
+                <p>
+                  <span class="business">NETexcom</span> -
+                  <span class="job">
+                    {{ $t('about-netexcom-job') }}
+                  </span><br>
+                  <span class="date">
+                    {{ $t('about-netexcom-date') }}
+                  </span>
+                </p>
               </section>
 
               <section class="exp">
-                <p><span class="business">What's Up Informatique</span> - <span class="job">Développeur
-                  web</span><br><span
-                  class="date">de juillet à octobre 2015 - 4 mois</span></p>
+                <p>
+                  <span class="business">What's Up Informatique</span> -
+                  <span class="job">
+                    {{ $t('about-whatsup-job') }}
+                  </span><br>
+                  <span class="date">
+                    {{ $t('about-whatsup-date') }}
+                  </span>
+                </p>
               </section>
             </section>
 
             <section id="graduates">
               <div class="dipl"></div>
-              <h1>Diplômes</h1>
+              <h1>{{ $t('about-degree-title') }}</h1>
               <hr class="inside">
               <section class="graduate">
-                <p><span class="school">Supinfo International University</span><br><span class="g">Associate of Science (BAC +2)</span> - <span class="year">2017</span></p>
+                <p>
+                  <span class="school">
+                    Supinfo International University
+                  </span><br>
+                  <span class="g">
+                    Associate of Science (BAC +2)
+                  </span> -
+                  <span class="year">2017</span>
+                </p>
               </section>
               <section class="graduate">
-                <p><span class="school">Greta</span><br><span class="g">Baccalauréat Professionnel Comptabilité</span> - <span class="year">2014</span></p>
+                <p>
+                  <span class="school">
+                    Greta
+                  </span><br>
+                  <span class="g">
+                    {{ $t('about-degree-greta') }}
+                  </span> -
+                  <span class="year">2014</span>
+                 </p>
               </section>
             </section>
           </section>
