@@ -93,10 +93,10 @@
     .header {
       background-color: rgba(42, 42, 42, .7);
       color: #A5A5A5;
-    }
 
-    li:hover, .router-link-exact-active {
-      color: $white;
+      li:hover, .router-link-exact-active {
+        color: $white;
+      }
     }
   }
 
@@ -104,10 +104,10 @@
     .header {
       background-color: rgba(255, 255, 255, .7);
       color: #4E4E4E;
-    }
 
-    li:hover, .router-link-exact-active  {
-      color: $black;
+      li:hover, .router-link-exact-active  {
+        color: $black;
+      }
     }
   }
 
