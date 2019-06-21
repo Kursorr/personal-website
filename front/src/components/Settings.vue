@@ -62,7 +62,6 @@
     }
   })
   export default class Settings extends Vue {
-    public langs = ['fr', 'en']
     isActive: string = 'disabled'
     frSelected: boolean = true
     enSelected: boolean = false
