@@ -15,6 +15,9 @@
           <router-link tag="li" to="/projects">
             <span>{{ $t('menu-portfolio') }}</span>
           </router-link>
+          <router-link tag="li" to="/blog">
+            <span>blog</span>
+          </router-link>
           <router-link tag="li" to="/contact">
             <span>{{ $t('menu-contact') }}</span>
           </router-link>
