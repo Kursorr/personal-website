@@ -1,5 +1,5 @@
 <template>
-  <div class="header" :class="theme">
+  <div class="header">
     <div class="outContent">
       <div class="content row">
         <div class="logo"></div>
@@ -29,17 +29,8 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import * as Vuex from 'vuex'
-  import store from '../store'
 
-  @Component({
-    store,
-    computed: {
-      ...Vuex.mapGetters([
-        'theme'
-      ])
-    }
-  })
+  @Component
   export default class Header extends Vue {
   }
 </script>
@@ -96,25 +87,30 @@
       border-bottom: solid $hover 1px;
       cursor: pointer;
     }
+  }
 
-    &.darker {
+  .darker {
+    .header {
       background-color: rgba(42, 42, 42, .7);
       color: #A5A5A5;
-
-      li:hover, .router-link-exact-active {
-        color: $white;
-      }
     }
 
-    &.lighter {
-      background-color: rgba(255, 255, 255, .7);
-      color: #4E4E4E;
-
-      li:hover, .router-link-exact-active  {
-        color: $black;
-      }
+    li:hover, .router-link-exact-active {
+      color: $white;
     }
   }
+
+  .lighter {
+    .header {
+      background-color: rgba(255, 255, 255, .7);
+      color: #4E4E4E;
+    }
+
+    li:hover, .router-link-exact-active  {
+      color: $black;
+    }
+  }
+
 
   @media screen and (max-width: $sm-breakpoint) {
     div.header {
