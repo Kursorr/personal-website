@@ -40,13 +40,12 @@
 
 <style lang="scss">
   .container.project {
-    margin-top: 0;
+    margin-top: 60px;
 
     div.title {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 70px;
       height: 100px;
       background-color: #1b1b1b;
 
