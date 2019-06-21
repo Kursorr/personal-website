@@ -1,5 +1,5 @@
 <template>
-  <div id="styleChanger" :class="[theme, isActive]">
+  <div id="styleChanger" :class="isActive">
     <div>
       <a class="changeOpener" @click="toggle()">
         <img src="../assets/img/settings.svg" alt="settings">
@@ -30,14 +30,12 @@
             id="fr"
             @click="setFr()"
         ></li>
-
         <li class="flag"
             :class="enSelected ? 'enSelected': ''"
             id="en"
             @click="setEn()"
         ></li>
       </ul>
-
     </div>
   </div>
 </template>
@@ -49,11 +47,6 @@
 
   @Component({
     store,
-    computed: {
-      ...Vuex.mapGetters([
-        'theme'
-      ])
-    },
     methods: {
       ...Vuex.mapActions([
         'setLigther',
@@ -195,61 +188,64 @@
         background-image: url('../assets/img/flags/en.svg');
       }
     }
+  }
 
-    &.darker {
+  .darker {
+    #styleChanger {
       background-color: $black;
       border: 1px solid #494949;
-
-      .changeOpener {
-        background: $black;
-        border-right: 1px solid #494949;
-        border-top: 1px solid #494949;
-        border-bottom: 1px solid #494949;
-      }
-
-      .title {
-        color: $white;
-      }
-
-      .settingsBtn {
-        color: $white;
-        background: $black;
-        border: 1px solid #494949;
-
-        &:hover {
-          border: 1px solid $black;
-          color: $black;
-          background: $white;
-        }
-      }
     }
 
-    &.lighter {
-      background-color: $white;
-      border: 1px solid #EEE;
+    .changeOpener {
+      background: $black;
+      border-right: 1px solid #494949;
+      border-top: 1px solid #494949;
+      border-bottom: 1px solid #494949;
+    }
 
-      .changeOpener {
-        background: $white;
-        border-right: 1px solid #EEE;
-        border-top: 1px solid #EEE;
-        border-bottom: 1px solid #EEE;
-      }
+    .title {
+      color: $white;
+    }
 
-      .title {
-        color: $black;
-      }
+    .settingsBtn {
+      color: $white;
+      background: $black;
+      border: 1px solid #494949;
 
-      .settingsBtn {
+      &:hover {
         border: 1px solid $black;
         color: $black;
-        background: transparent;
-
-        &:hover {
-          color: $white;
-          background: $black;
-        }
+        background: $white;
       }
     }
+  }
 
+  .lighter {
+    #styleChanger {
+      background-color: $white;
+      border: 1px solid #EEE;
+    }
+
+    .changeOpener {
+      background: $white;
+      border-right: 1px solid #EEE;
+      border-top: 1px solid #EEE;
+      border-bottom: 1px solid #EEE;
+    }
+
+    .title {
+      color: $black;
+    }
+
+    .settingsBtn {
+      border: 1px solid $black;
+      color: $black;
+      background: transparent;
+
+      &:hover {
+        color: $white;
+        background: $black;
+      }
+    }
   }
 </style>
