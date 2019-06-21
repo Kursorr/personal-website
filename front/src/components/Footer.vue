@@ -31,16 +31,16 @@
               </ul>
             </p>
           </div>
-          <div id="address">
-            <address>
-              <h1>senechal maxime</h1>
-              <hr class="inside">
-              <span id="post">11, rue des Roses <br>06110 le Cannet</span>
+          <address>
+            <h1>senechal maxime</h1>
+            <hr class="inside">
+            <div>
+              <span id="post">11, rue des Roses<br>06110 le Cannet</span>
               <a href="tel:+33695577562" id="tel">(+33) 6.95.57.75.62</a>
               <a href="mailto:maxime.senechal@supinfo.com" id="email">maxime.senechal@supinfo.com</a>
               <span>www.maxime-senechal.com</span>
-            </address>
-          </div>
+            </div>
+          </address>
         </div>
       </div>
     </div>
@@ -160,11 +160,14 @@
         div#infos {
           max-width: 500px;
 
+          @media screen and (max-width: $md-breakpoint) {
+            margin-bottom: 30px;
+          }
+
           h1 {
             text-transform: uppercase;
             font-size: 14px;
             letter-spacing: 1px;
-            margin-bottom: 15px;
           }
 
           hr {
@@ -182,26 +185,36 @@
           }
         }
 
-        div#address {
+        address {
           display: flex;
-          color: $white;
-          line-height: 20px;
+          flex-direction: column;
+          color: #7f7f7f;
+          text-align: right;
 
-          address {
+          h1 {
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            @media screen and (max-width: $md-breakpoint) {
+              text-align: left;
+            }
+          }
+
+          hr.inside {
+            margin-right: 0;
+            width: 152px;
+
+            @media screen and (max-width: $md-breakpoint) {
+              margin-left: 0;
+              width: 150px;
+            }
+          }
+
+          div {
+            line-height: 20px;
             display: flex;
             flex-direction: column;
-            color: #7f7f7f;
-
-            h1 {
-              text-transform: uppercase;
-              font-size: 14px;
-              letter-spacing: 1px;
-              text-align: center;
-            }
-
-            hr.inside {
-              width: 125px;
-            }
 
             span#post, a#tel, a#email {
               margin-bottom: 5px;
