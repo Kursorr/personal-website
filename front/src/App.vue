@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="theme">
     <Header />
     <Settings />
     <transition
@@ -12,13 +12,23 @@
 </template>
 
 <script lang="ts">
+  import { Component, Vue } from 'vue-property-decorator'
+
   require('./assets/style/styles.scss')
+
   import Header from '@/components/Header.vue'
   import Footer from '@/components/Footer.vue'
   import Settings from '@/components/Settings.vue'
-  import { Component, Vue } from 'vue-property-decorator'
+  import * as Vuex from 'vuex'
+  import store from './store'
 
   @Component({
+    store,
+    computed: {
+      ...Vuex.mapGetters([
+        'theme'
+      ])
+    },
     components: {
       Header,
       Footer,
