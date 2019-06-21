@@ -10,11 +10,12 @@
       <div class="content">
         <section class="posts">
           <div class="post">
-            <div class="img">
-              Dockerisation de mon projet Qwirk
-            </div>
-            <div class="date">
-              31/07/2019
+            <div class="img"></div>
+            <div class="titleDate">
+              <h1>Dockerisation de mon projet Qwirk</h1>
+              <div class="date">
+                31/07/2019
+              </div>
             </div>
             <div class="presentation">
               <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi et necessitatibus possimus? Dolor
@@ -30,58 +31,9 @@
                 obcaecati?
               </div>
             </div>
-            <div class="read">
+            <button class="read">
               Lire l'article
-            </div>
-          </div>
-          <div class="post">
-            <div class="img">
-              Dockerisation de mon projet Qwirk
-            </div>
-            <div class="date">
-              31/07/2019
-            </div>
-            <div class="presentation">
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aspernatur cupiditate dicta,
-                eos, fugiat hic magni molestias nam nisi nobis non omnis quas reiciendis sit tempore ullam vel
-                voluptatibus.
-              </div>
-              <div>Ad delectus doloremque doloribus et illum libero natus officia quas ratione vero. Ad, aliquid,
-                deleniti dignissimos dolore error, esse laboriosam minus nam porro quam sapiente similique unde vel
-                veritatis voluptate?
-              </div>
-              <div>A aliquam atque cupiditate deleniti distinctio ea eaque enim eos est excepturi fugit incidunt
-                inventore magnam neque perspiciatis, possimus provident quaerat quasi quos repudiandae unde ut veritatis
-                voluptate voluptatibus voluptatum!
-              </div>
-            </div>
-            <div class="read">
-              Lire l'article
-            </div>
-          </div>
-          <div class="post">
-            <div class="img">
-              Dockerisation de mon projet Qwirk
-            </div>
-            <div class="date">
-              31/07/2019
-            </div>
-            <div class="presentation">
-              <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At atque autem cupiditate esse fugiat id
-                natus nisi nulla, temporibus vel. Alias eum nam nemo odio quaerat repellendus, tempore velit vitae.
-              </div>
-              <div>Beatae blanditiis dolorum earum illo maxime possimus quae sapiente tempora? Consequuntur dicta,
-                exercitationem facere libero nam non, numquam optio placeat reiciendis sit, ullam veniam. Dicta enim
-                fuga possimus reprehenderit ut?
-              </div>
-              <div>Architecto hic mollitia natus quam voluptates. Accusamus aut cumque debitis delectus eaque, enim
-                excepturi illo mollitia, neque non quae quam repudiandae sit suscipit, ullam veritatis voluptate. Culpa
-                deleniti rem tempore.
-              </div>
-            </div>
-            <div class="read">
-              Lire l'article
-            </div>
+            </button>
           </div>
         </section>
       </div>
@@ -117,48 +69,74 @@
   }
 
   section.posts {
-    margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-direction: column;
+    margin: 30px auto 0;
 
     div.post {
       display: flex;
       flex-direction: column;
-      max-width: 450px;
+      justify-content: space-between;
+      max-width: 600px;
       margin-bottom: 30px;
-      border: solid #222 1px;
-      background-color: #222;
-      color: #CCC;
+      border: solid #2A2A2A 1px;
+      background-color: #2A2A2A;
+      color: #A3A3A3;
       border-radius: 2px;
+
+      &:hover {
+        border: solid #E59A58 1px;
+      }
 
       .img {
         background-image: url('../assets/img/linescode.jpg');
         color: #FFF;
-        height: 90px;
+        height: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 18px;
       }
 
-      .date {
-        text-align: right;
-        font-size: 10px;
-        margin-top: 5px;
-        margin-right: 25px;
+      .titleDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 25px;
+
+        h1 {
+          font-size: 16px;
+          color: #CCC;
+          letter-spacing: 1px;
+        }
+
+        .date {
+          font-size: 10px;
+          letter-spacing: 2px;
+        }
       }
 
       .presentation {
-        padding: 15px 25px 20px;
+        margin: 0 25px 20px;
         text-align: justify;
         line-height: 20px;
+        letter-spacing: .8px;
       }
 
-      .read {
-        color: #CCC;
-        text-align: right;
-        margin-right: 25px;
+      button.read {
+        color: #FFF;
+        background-color: #383838;
+        border: none;
+        padding: 15px;
+        text-transform: uppercase;
+        outline: 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #222;
+          transition: background-color 150ms;
+        }
       }
     }
   }
