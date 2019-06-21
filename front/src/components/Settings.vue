@@ -124,8 +124,6 @@
           transition: transform 300ms;
         }
       }
-
-
     }
 
     .title {
@@ -251,7 +249,7 @@
           background: $black;
         }
       }
-
     }
+
   }
 </style>
