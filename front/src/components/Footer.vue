@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" :class="theme">
+  <div id="footer">
     <div class="outContent network">
       <div class="content">
         <div id="network">
@@ -74,17 +74,8 @@
 
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
-  import * as Vuex from 'vuex'
-  import store from '../store'
 
-  @Component({
-    store,
-    computed: {
-      ...Vuex.mapGetters([
-        'theme'
-      ])
-    }
-  })
+  @Component
   export default class Footer extends Vue {}
 </script>
 
@@ -285,80 +276,79 @@
         }
       }
     }
+  }
 
+  .darker {
+    .outContent.network {
+      background-color: $black;
 
-    &.darker {
-      .outContent.network {
-        background-color: $black;
-
-        .roundedDiv {
-          background-color: #383838;
-        }
-
-        #github {
-          background: url(../assets/img/network/lighter/github.png) no-repeat;
-          background-size: 16px;
-        }
-
-        #linkedin {
-          background: url(../assets/img/network/lighter/linkedin.png) no-repeat;
-          background-size: 16px;
-        }
-
-        #twitter {
-          background: url(../assets/img/network/lighter/twitter.png) no-repeat;
-          background-size: 16px;
-        }
+      .roundedDiv {
+        background-color: #383838;
       }
 
-      div.outContent.address {
-        background-color: #2A2A2A;
-
-        h1 {
-          color: $white;
-        }
+      #github {
+        background: url(../assets/img/network/lighter/github.png) no-repeat;
+        background-size: 16px;
       }
 
-      div.outContent.copyright {
-        background-color: $black;
+      #linkedin {
+        background: url(../assets/img/network/lighter/linkedin.png) no-repeat;
+        background-size: 16px;
+      }
+
+      #twitter {
+        background: url(../assets/img/network/lighter/twitter.png) no-repeat;
+        background-size: 16px;
       }
     }
 
-    &.lighter {
-      .outContent.network {
-        background-color: #CACACA;
+    div.outContent.address {
+      background-color: #2A2A2A;
 
-        .roundedDiv {
-          background-color: #E1E1E1;
-        }
-
-        #github {
-          background: url(../assets/img/network/darker/github.png) no-repeat;
-          background-size: 16px;
-        }
-
-        #linkedin {
-          background: url(../assets/img/network/darker/linkedin.png) no-repeat;
-          background-size: 16px;
-        }
-
-        #twitter {
-          background: url(../assets/img/network/darker/twitter.png) no-repeat;
-          background-size: 16px;
-        }
+      h1 {
+        color: $white;
       }
+    }
 
-      div.outContent.address {
+    div.outContent.copyright {
+      background-color: $black;
+    }
+  }
+
+  .lighter {
+    .outContent.network {
+      background-color: #CACACA;
+
+      .roundedDiv {
         background-color: #E1E1E1;
-
-        h1 {
-          color: $black;
-        }
       }
 
-      div.outContent.copyright {
-        background-color: #CACACA;
+      #github {
+        background: url(../assets/img/network/darker/github.png) no-repeat;
+        background-size: 16px;
       }
+
+      #linkedin {
+        background: url(../assets/img/network/darker/linkedin.png) no-repeat;
+        background-size: 16px;
+      }
+
+      #twitter {
+        background: url(../assets/img/network/darker/twitter.png) no-repeat;
+        background-size: 16px;
+      }
+    }
+
+    div.outContent.address {
+      background-color: #E1E1E1;
+
+      h1 {
+        color: $black;
+      }
+    }
+
+    div.outContent.copyright {
+      background-color: #CACACA;
     }
   }
 </style>
