@@ -112,13 +112,20 @@
 
     a {
       transition: all .4s ease;
-      &:hover {
-        cursor: pointer;
-      }
-
       img {
         width: 25px;
+        transform: rotate(0deg);
       }
+
+      &:hover {
+        cursor: pointer;
+        img {
+          transform: rotate(90deg);
+          transition: transform 300ms;
+        }
+      }
+
+
     }
 
     .title {
