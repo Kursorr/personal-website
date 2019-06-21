@@ -352,7 +352,7 @@
       section.exp {
         line-height: 20px;
         margin-bottom: 15px;
-        margin-left: 15px;
+        margin-left: 90px;
 
         span.business {
           font-size: 16px;
