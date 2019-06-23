@@ -48,13 +48,17 @@
     width: 100%;
     z-index: 2;
 
-    div.content.row {
-      justify-content: space-between;
+    div.logo {
+      height: 59px;
+      width: 82px;
+      background-size: 120px;
+      background-repeat: no-repeat;
+      background-position-x: right;
+      background-position-y: center;
     }
 
-    div.logo {
-      height: 61px;
-      width: 100px;
+    div.content.row {
+      justify-content: space-between;
     }
 
     #menu-toggle  { display: none; }
@@ -94,6 +98,16 @@
       background-color: rgba(42, 42, 42, .7);
       color: #A5A5A5;
 
+      div.logo {
+        background: url('../assets/img/logos/logo-darker.png'); // need a lighter
+        height: 59px;
+        width: 82px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: center;
+      }
+
       li:hover, .router-link-exact-active {
         color: $white;
       }
@@ -104,6 +118,16 @@
     .header {
       background-color: rgba(255, 255, 255, .7);
       color: #4E4E4E;
+
+      div.logo {
+        background: url('../assets/img/logos/logo-darker.png');
+        height: 59px;
+        width: 82px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: center;
+      }
 
       li:hover, .router-link-exact-active  {
         color: $black;
