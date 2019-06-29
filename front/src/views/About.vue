@@ -2,14 +2,13 @@
   <div class="container">
     <h1><span class="initials">s</span>enechal <span class="initials">m</span>axime</h1>
 
-    <hr class="name">
+    <hr>
 
     <div id="aboutMe">
       <div class="outContent">
         <div class="content">
           <div id="prensentation">
-            <div class="circle">
-            </div>
+            <img src="../assets/img/max.png" alt="portrait" id="portrait">
             <div id="all">
               <h1>{{ $t('about-title') }}</h1>
               <p>
@@ -222,15 +221,17 @@
       display: flex;
       justify-content: space-evenly;
 
-      div.circle {
-        height: 240px;
-        min-width: 240px;
-        border: solid $black 1px;
+      #portrait {
+        height: 300px;
         border-radius: 50%;
       }
 
       div#all {
         width: 42%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         h1 {
           font-size: 16px;
