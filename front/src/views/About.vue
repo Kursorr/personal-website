@@ -192,6 +192,10 @@
               </section>
             </section>
           </section>
+
+          <a href="/CV.pdf" class="btn download" download>
+            {{ $t('about-download-cv') }}
+          </a>
         </div>
       </div>
     </div>
@@ -207,6 +211,11 @@
 
 <style lang="scss">
   @import "../assets/style/variables.scss";
+
+  .btn.download {
+    width: 200px;
+    margin: 0 auto 50px;
+  }
 
   .container {
     margin-top: 100px;
