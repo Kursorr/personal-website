@@ -60,15 +60,18 @@
           font-size: 18px;
           text-transform: uppercase;
           text-align: left;
+          letter-spacing: 1px;
         }
 
         h3 {
           color: #E1E1E1;
+          letter-spacing: 1px;
         }
 
         span {
           color: #E1E1E1;
           font-style: italic;
+          letter-spacing: 0.7px;
         }
       }
     }
