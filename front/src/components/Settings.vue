@@ -95,7 +95,7 @@
 
     .changeOpener {
       left: 100%;
-      padding: 13px 10px 0;
+      padding: 14px 12px 0;
       position: absolute;
       border-radius: 0 5px 5px 0;
       width: 49px;
