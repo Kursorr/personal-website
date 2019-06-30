@@ -11,13 +11,15 @@
         <div id="projects">
           <ul>
             <li>
-              <figure class="project red"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample6.jpg" alt="sq-sample6"/>
+              <figure class="project red">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample6.jpg" alt="sq-sample6"/>
                 <figcaption>
                   <h2>Qwirk <span>App</span></h2>
                 </figcaption>
                 <router-link to="/project/statics-websites"></router-link>
               </figure>
             </li>
+            <!--
             <li>
               <figure class="project green"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample14.jpg" alt="sq-sample14"/>
                 <figcaption>
@@ -33,7 +35,7 @@
                 </figcaption>
                 <a href="#"></a>
               </figure>
-            </li>
+            </li>-->
           </ul>
         </div>
       </div>
