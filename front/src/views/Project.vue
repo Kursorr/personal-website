@@ -47,25 +47,35 @@
       justify-content: center;
       align-items: center;
       height: 100px;
-      background-color: #1b1b1b;
+      background-color: #2A2A2A;
+      margin-bottom: 25px;
 
       section.titles {
         display: flex;
         flex-direction: column;
-        width: inherit;
         color: #fff;
 
         h2 {
-          color: #fff;
-          font-size: 24px;
+          color: #FBFBFB;
+          font-size: 18px;
           text-transform: uppercase;
           text-align: left;
+        }
+
+        h3 {
+          color: #E1E1E1;
+        }
+
+        span {
+          color: #E1E1E1;
+          font-style: italic;
         }
       }
     }
 
     .infos {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
@@ -74,20 +84,44 @@
       }
 
       .imgs {
+        margin: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+
         #first {
           background-image: url('../assets/img/project/statics/beautybio.png');
+          background-size: 440px;
+          background-repeat: no-repeat;
+          height: 330px;
+          width: 430px;
         }
         #second {
-
+          background-image: url('../assets/img/project/statics/blueband.png');
+          background-size: 440px;
+          background-repeat: no-repeat;
+          height: 480px;
+          width: 430px;
         }
         #third {
-
+          background-image: url('../assets/img/project/statics/diablo.png');
+          background-size: 440px;
+          background-repeat: no-repeat;
+          height: 240px;
+          width: 430px;
         }
         #four {
-
+          background-image: url('../assets/img/project/statics/zozor.png');
+          background-size: 440px;
+          background-repeat: no-repeat;
+          height: 330px;
+          width: 430px;
         }
         #fourth {
-
+          background-image: url('../assets/img/project/statics/zozor-cv.png');
+          background-size: 440px;
+          background-repeat: no-repeat;
+          height: 380px;
+          width: 430px;
         }
       }
     }
