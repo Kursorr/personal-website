@@ -4,9 +4,9 @@
       <div class="outContent">
         <div class="content">
           <section class="titles">
-            <h2>{{ $t('project-statics-websites-title') }}</h2>
-            <h3>Beauty Bio / BlueBand / Diablo 3 / Zozor & CV</h3>
-            <span>{{ $t('project-statics-websites-subtitle') }}</span>
+            <h2>{{ $t('projects[0].title') }}</h2>
+            <h3>{{ $t('projects[0].subject') }}</h3>
+            <span>{{ $t('projects[0].subtitle') }}</span>
           </section>
         </div>
       </div>
@@ -16,15 +16,7 @@
       <div class="content">
         <section class="infos">
           <h1>
-            {{ $t('project-statics-websites-infos-title') }}
           </h1>
-          <div class="imgs">
-            <div id="first"></div>
-            <div id="second"></div>
-            <div id="third"></div>
-            <div id="four"></div>
-            <div id="fourth"></div>
-          </div>
         </section>
       </div>
     </div>
@@ -83,49 +75,6 @@
       justify-content: center;
 
       h1 {
-        width: 450px;
-      }
-
-      .imgs {
-        margin: 50px 0;
-        display: flex;
-        flex-wrap: wrap;
-
-        #first {
-          background-image: url('../assets/img/project/statics/beautybio.png');
-          background-size: 440px;
-          background-repeat: no-repeat;
-          height: 330px;
-          width: 430px;
-        }
-        #second {
-          background-image: url('../assets/img/project/statics/blueband.png');
-          background-size: 440px;
-          background-repeat: no-repeat;
-          height: 480px;
-          width: 430px;
-        }
-        #third {
-          background-image: url('../assets/img/project/statics/diablo.png');
-          background-size: 440px;
-          background-repeat: no-repeat;
-          height: 240px;
-          width: 430px;
-        }
-        #four {
-          background-image: url('../assets/img/project/statics/zozor.png');
-          background-size: 440px;
-          background-repeat: no-repeat;
-          height: 330px;
-          width: 430px;
-        }
-        #fourth {
-          background-image: url('../assets/img/project/statics/zozor-cv.png');
-          background-size: 440px;
-          background-repeat: no-repeat;
-          height: 380px;
-          width: 430px;
-        }
       }
     }
   }
