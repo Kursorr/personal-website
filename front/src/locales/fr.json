@@ -37,9 +37,6 @@
   "menu-contact": "contact",
   "menu-home": "home",
   "menu-portfolio": "portfolio",
-  "project-statics-websites-infos-title": "Voici mes premiers sites statiques réalisés en HTML / CSS.",
-  "project-statics-websites-subtitle": "Sites vitrines",
-  "project-statics-websites-title": "projets web",
   "project-title": "rojets",
   "project-type1": "Création de sites internet",
   "project-type2": "Développement spécifique",
@@ -49,5 +46,12 @@
   "settings-style-dark": "foncé",
   "settings-style-light": "clair",
   "settings-style-subtitle": "thème",
-  "settings-style-title": "sélecteur de style"
+  "settings-style-title": "sélecteur de style",
+	"projects": [
+		{
+			"title": "Application de tchat",
+			"subject": "Qwirk",
+			"subtitle": "Logiciel"
+		}
+	]
 }
