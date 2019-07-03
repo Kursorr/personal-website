@@ -27,7 +27,7 @@
     ]
     actualImg = this.portraits[7]
 
-    generateNumber () {
+    private generateNumber () {
       return Math.floor(Math.random() * 13)
     }
 
