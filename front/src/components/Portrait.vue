@@ -31,7 +31,7 @@
       return Math.floor(Math.random() * 13)
     }
 
-    changeImg() {
+    public changeImg() {
       const index = this.generateNumber()
       this.actualImg = this.portraits[index]
     }
