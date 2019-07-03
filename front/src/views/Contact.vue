@@ -36,27 +36,46 @@
             </p>
           </section>
           <form method="POST" id="submitForm" @submit.prevent="sendData()">
-            <label for="name" class="inp">
-              <input type="text" class="input" id="name" placeholder=" " required v-model="form.name" autocomplete="off">
-              <span class="label">{{ $t('contact-name-surname') }}</span>
-              <span class="border"></span>
-            </label>
+            <div>
+              <input type="text"
+                     :placeholder="$t('contact-name-surname')"
+                     v-model="form.name"
+                     autocomplete="off"
+                     required>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <span class="top"></span>
+              <span class="left"></span>
+            </div>
 
-            <label for="email" class="inp" id="emailLabel">
-              <input type="text" class="input" id="email" placeholder=" " required v-model="form.email" autocomplete="off">
-              <span class="label">{{ $t('contact-email') }}</span>
-              <span class="border"></span>
-            </label>
+            <div>
+              <input type="text"
+                     :placeholder="$t('contact-email')"
+                     v-model="form.email"
+                     autocomplete="off"
+                     required>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <span class="top"></span>
+              <span class="left"></span>
+            </div>
 
-            <label for="message" class="inp" id="messageLabel">
-              <textarea id="msgInput" cols="30" rows="10" autocomplete="off" required v-model="form.message" placeholder=" "></textarea>
-              <span class="label">{{ $t('contact-msg') }}</span>
-              <span class="border area"></span>
-            </label>
+            <div>
+              <textarea
+                type="text"
+               :placeholder="$t('contact-msg')"
+               v-model="form.message"
+               autocomplete="off"
+               required></textarea>
+              <span class="bottom"></span>
+              <span class="right"></span>
+              <span class="top"></span>
+              <span class="left"></span>
+            </div>
 
             <div class="g-recaptcha" data-sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></div>
             <vue-recaptcha sitekey="6LenZjkUAAAAACrcywJA5E-XxxNh1iykONppVi_7"></vue-recaptcha>
-            <input class="btn" type="submit" value="Envoyé">
+            <button class="btn" type="submit">Envoyé</button>
             <p id="contactResult"></p>
           </form>
         </section>
@@ -152,80 +171,93 @@
       display: flex;
       flex-direction: column;
 
-      .inp {
+      div {
         position: relative;
-        margin: auto;
+        margin-bottom: 10px;
+      }
+
+      input, textarea {
         width: 100%;
-      }
-
-      .label {
-        position: absolute;
-        top: 16px;
-        left: 0;
-        font-size: 16px;
-        color: #9098A9;
-        font-weight: 500;
-        transform-origin: 0 0;
-        transition: all .2s ease;
-      }
-
-      #emailLabel {
-        margin: 20px 0;
-      }
-
-      .border {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background: #0077FF;
-        transform: scaleX(0);
-        transform-origin: 0 0;
-        transition: all .15s ease;
-      }
-
-      .border.area {
-        bottom: 2px;
-      }
-
-      input.input, textarea {
-        -webkit-appearance: none;
-        width: 100%;
-        border: 0;
-        font-family: inherit;
-        padding: 12px 0;
-        height: 48px;
-        font-size: 16px;
-        font-weight: 500;
-        border-bottom: 2px solid #C8CCD4;
-        background: none;
-        border-radius: 0;
-        color: #223254;
-        transition: all .15s ease;
-
-        &:hover {
-          background: rgba(#223254, .03)
-        }
-
-        &:not(:placeholder-shown) + span {
-          color: #5A667F;
-          transform: translateY(-26px) scale(.75);
-        }
+        background-color: #F9F9F9;
+        padding: 10px;
+        font-size: 12px;
+        border: 1px solid transparent;
+        transition: background-color 0.3s ease-in-out;
 
         &:focus {
-          background: none;
           outline: none;
 
-          + span {
-            color: #0077FF;
-            transform: translateY(-26px) scale(.75);
-
-            + .border {
-              transform: scaleX(1);
-            }
+          &::placeholder {
+            color: #323232;
+            transition: color 500ms;
           }
         }
+
+        &::placeholder {
+          color: #7F7F7F;
+        }
+      }
+
+      span {
+        position: absolute;
+        background-color: #E59A58;
+        transition: transform 0.5s ease;
+      }
+
+      .bottom,
+      .top {
+        height: 1px;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+      }
+
+      .left,
+      .right {
+        width: 1px;
+        top: 0;
+        bottom: 0;
+        transform: scaleY(0);
+      }
+
+      .bottom {
+        bottom: 0;
+        transform-origin: bottom right;
+      }
+
+      input:focus ~ .bottom, textarea:focus ~ .bottom {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+
+      .right {
+        right: 0;
+        transform-origin: top right;
+      }
+
+      input:focus ~ .right, textarea:focus ~ .right {
+        transform-origin: bottom right;
+        transform: scaleY(1);
+      }
+
+      .top {
+        top: 0;
+        transform-origin: top left;
+      }
+
+      input:focus ~ .top, textarea:focus ~ .top  {
+        transform-origin: top right;
+        transform: scaleX(1);
+      }
+
+      .left {
+        left: 0;
+        transform-origin: bottom left;
+      }
+
+      input:focus ~ .left, textarea:focus ~ .left {
+        transform-origin: top left;
+        transform: scaleY(1);
       }
     }
 
