@@ -1,6 +1,6 @@
 <template>
   <img
-    :src="require(`@/assets/img/portrait/` + actualImg)"
+    :src="require(`@/assets/img/portraits/` + actualImg)"
     alt="portrait" id="portrait"
     @mouseover="changeImg()">
 </template>
