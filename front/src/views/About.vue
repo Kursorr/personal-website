@@ -8,7 +8,7 @@
       <div class="outContent">
         <div class="content">
           <div id="prensentation">
-            <img src="../assets/img/max.png" alt="portrait" id="portrait">
+            <img src="../assets/img/portrait/happy.png" alt="portrait" id="portrait">
             <div id="all">
               <h1>{{ $t('about-title') }}</h1>
               <p>
