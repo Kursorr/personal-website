@@ -237,16 +237,6 @@
       display: flex;
       justify-content: space-evenly;
 
-      #portrait {
-        height: 300px;
-        border-radius: 50%;
-        border: solid #F2F2F2 1px;
-
-        &:hover {
-          border-color: #F7E0CC;
-        }
-      }
-
       div#all {
         width: 42%;
         display: flex;

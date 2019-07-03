@@ -1,7 +1,7 @@
 <template>
   <img
     :src="require(`@/assets/img/portraits/` + actualImg)"
-    alt="portrait" id="portrait"
+    alt="portrait"
     @mouseover="changeImg()">
 </template>
 
@@ -38,6 +38,14 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+  img {
+    height: 300px;
+    border-radius: 50%;
+    border: solid #F2F2F2 1px;
 
+    &:hover {
+      border-color: #F7E0CC;
+    }
+  }
 </style>
