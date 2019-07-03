@@ -1,0 +1,43 @@
+<template>
+  <img
+    :src="require(`@/assets/img/portrait/` + actualImg)"
+    alt="portrait" id="portrait"
+    @mouseover="changeImg()">
+</template>
+
+<script lang="ts">
+  import { Component, Vue } from 'vue-property-decorator'
+
+  @Component
+  export default class Portrait extends Vue {
+    public portraits = [
+      'anger.png',
+      'ascendant.png',
+      'barbarian.png',
+      'beaten.png',
+      'class.png',
+      'cyberpunk.png',
+      'determined.png',
+      'happy.png',
+      'neutral.png',
+      'sadness.png',
+      'saiyan.png',
+      'smirk.png',
+      'triggered.png',
+    ]
+    actualImg = this.portraits[7]
+
+    generateNumber () {
+      return Math.floor(Math.random() * 13)
+    }
+
+    changeImg() {
+      const index = this.generateNumber()
+      this.actualImg = this.portraits[index]
+    }
+  }
+</script>
+
+<style lang="scss">
+
+</style>
