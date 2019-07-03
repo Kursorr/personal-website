@@ -11,12 +11,18 @@ export default new Vuex.Store({
   },
   getters: {
     theme (state: any) {
+      if (localStorage.theme) {
+        state.theme = localStorage.theme
+        return state.theme
+      }
+
       return state.theme
     }
   },
   mutations: {
     [UPDATE_THEME] (state: any, theme: any) {
       state.theme = theme
+      localStorage.theme = theme
     }
   },
   actions: {
