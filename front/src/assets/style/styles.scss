@@ -77,6 +77,8 @@ a.btn, input.btn, button.btn {
 
   &:hover {
     cursor: pointer;
+    background-color: #E7A468;
+    transition: background-color 500ms;
   }
 }
 
