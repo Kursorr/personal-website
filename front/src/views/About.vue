@@ -8,7 +8,12 @@
       <div class="outContent">
         <div class="content">
           <div id="prensentation">
-            <img src="../assets/img/portrait/happy.png" alt="portrait" id="portrait">
+
+            <img
+              :src="require(`@/assets/img/portrait/` + actualImg)"
+              alt="portrait" id="portrait"
+              @mouseover="changeImg()">
+
             <div id="all">
               <h1>{{ $t('about-title') }}</h1>
               <p>
@@ -206,7 +211,34 @@
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class About extends Vue {}
+  export default class About extends Vue {
+    public portraits = [
+      'anger.png',
+      'ascendant.png',
+      'barbarian.png',
+      'beaten.png',
+      'class.png',
+      'cyberpunk.png',
+      'determined.png',
+      'happy.png',
+      'neutral.png',
+      'sadness.png',
+      'saiyan.png',
+      'smirk.png',
+      'triggered.png',
+    ]
+    actualImg = this.portraits[7]
+
+    generateNumber () {
+      return Math.floor(Math.random() * 13)
+    }
+
+    changeImg() {
+      const index = this.generateNumber()
+      this.actualImg = this.portraits[index]
+    }
+
+  }
 </script>
 
 <style lang="scss">
@@ -233,6 +265,11 @@
       #portrait {
         height: 300px;
         border-radius: 50%;
+        border: solid #F2F2F2 1px;
+
+        &:hover {
+          border-color: #F7E0CC;
+        }
       }
 
       div#all {
