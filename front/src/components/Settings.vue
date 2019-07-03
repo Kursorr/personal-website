@@ -65,14 +65,24 @@
 
     setFr () {
       this.$i18n.locale = 'fr'
+      localStorage.locale = this.$i18n.locale
+
       this.frSelected = true
       this.enSelected = false
     }
 
     setEn () {
       this.$i18n.locale = 'en'
+      localStorage.locale = this.$i18n.locale
+
       this.frSelected = false
       this.enSelected = true
+    }
+
+    mounted () {
+      if (localStorage.locale) {
+        this.$i18n.locale = localStorage.locale
+      }
     }
   }
 </script>
