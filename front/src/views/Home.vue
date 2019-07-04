@@ -35,7 +35,7 @@
 
     div#bigImg {
       height: 100%;
-      background: url(../assets/img/background.jpg) 100% 0 no-repeat;
+      background: url(../assets/img/backgrounds/background.jpg) 100% 0 no-repeat;
       background-size: cover;
 
       div#overlay {
