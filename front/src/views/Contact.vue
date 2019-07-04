@@ -31,7 +31,7 @@
             <h2><span class="initials">S</span>ENECHAL <span class="initials">M</span>axime</h2>
             <p id="address">
               11 rue des Roses<br>
-              06110 - Le Cannet<br>
+              06110 - le Cannet<br>
               +33 6 95 57 75 62<br>
             </p>
           </section>
@@ -63,10 +63,13 @@
             <div>
               <textarea
                 type="text"
-               :placeholder="$t('contact-msg')"
-               v-model="form.message"
-               autocomplete="off"
-               required></textarea>
+                :placeholder="$t('contact-msg')"
+                v-model="form.message"
+                autocomplete="off"
+                required
+                rows="9"
+                cols="40"
+              ></textarea>
               <span class="bottom"></span>
               <span class="right"></span>
               <span class="top"></span>
