@@ -168,6 +168,10 @@
         border-radius: 0;
         text-align: center;
         text-transform: uppercase;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
 
