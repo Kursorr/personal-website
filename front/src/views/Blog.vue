@@ -51,7 +51,7 @@
       align-items: center;
       height: 300px;
       width: 100%;
-      background-image: url('../assets/img/write.jpg');
+      background-image: url('../assets/img/backgrounds/write.jpg');
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -90,7 +90,7 @@
       }
 
       .img {
-        background-image: url('../assets/img/linescode.jpg');
+        background-image: url('../assets/img/backgrounds/linescode.jpg');
         color: #FFF;
         height: 100px;
         display: flex;
