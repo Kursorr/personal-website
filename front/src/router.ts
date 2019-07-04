@@ -32,7 +32,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "projects" */ './views/Projects.vue')
     },
     {
-      path: '/project/statics-websites',
+      path: '/project/qwirk',
       name: 'project',
       component: () => import(/* webpackChunkName: "project" */ './views/Project.vue')
     },

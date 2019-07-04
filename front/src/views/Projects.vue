@@ -16,7 +16,7 @@
                 <figcaption>
                   <h2>Qwirk <span>App</span></h2>
                 </figcaption>
-                <router-link to="/project/statics-websites"></router-link>
+                <router-link to="/project/qwirk"></router-link>
               </figure>
             </li>
             <!--
