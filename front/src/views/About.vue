@@ -267,23 +267,23 @@
     flex-wrap: wrap;
 
     div.webdesign {
-      background-image: url('../assets/img/spritesheet.png');
-      background-position: 0 -168px;
+      width: 71px; height: 71px;
+      background: url('../assets/img/sprite.png') -192px -10px;
     }
 
     div.frontend {
-      background-image: url('../assets/img/spritesheet.png');
-      background-position: -84px -84px;
+      width: 71px; height: 71px;
+      background: url('../assets/img/sprite.png')  -101px -101px;
     }
 
     div.backend {
-      background-image: url('../assets/img/spritesheet.png');
-      background-position: -84px 0;
+      width: 71px; height: 71px;
+      background: url('../assets/img/sprite.png') -10px -10px;
     }
 
     div.best-practice {
-      background-image: url('../assets/img/spritesheet.png');
-      background-position: 0 -84px;
+      width: 71px; height: 71px;
+      background: url('../assets/img/sprite.png') -101px -10px;
     }
 
     section.skill {
@@ -404,12 +404,10 @@
 
       div.dipl {
         position: absolute;
-        height: 84px;
-        width: 84px;
-        right: 45px;
-        top: -5px;
-        background-image: url('../assets/img/spritesheet.png');
-        background-position: -84px -168px;
+        right: 52px;
+        top: 4px;
+        width: 71px; height: 71px;
+        background: url('../assets/img/sprite.png') -10px -101px;
       }
 
       section.graduate {
