@@ -2,7 +2,7 @@
   <div id="styleChanger" :class="isActive">
     <div>
       <a class="changeOpener" @click="toggle()">
-        <img src="../assets/img/settings.svg" alt="settings">
+        <div class="settings-img"></div>
       </a>
 
       <strong class="title">{{ $t('settings-style-title') }}</strong>
@@ -96,7 +96,7 @@
     width: 244px;
     z-index: 9999;
     position: fixed;
-    padding: 16px 17px 5px 17px;
+    padding: 17px;
     transition: margin .4s ease;
 
     &.disabled {
@@ -105,12 +105,23 @@
 
     .changeOpener {
       left: 100%;
-      padding: 14px 12px 0;
+      padding: 9px 6px 0;
       position: absolute;
       border-radius: 0 5px 5px 0;
       width: 49px;
       height: 54px;
       top: 50px;
+
+      .settings-img {
+        width: 37px; height: 36px;
+        background: url('../assets/img/sprite.png') -283px -140px;
+
+        &:hover {
+          cursor: pointer;
+          transform: rotate(90deg);
+          transition: transform 400ms;
+        }
+      }
     }
 
     a {
@@ -118,14 +129,6 @@
       img {
         width: 25px;
         transform: rotate(0deg);
-      }
-
-      &:hover {
-        cursor: pointer;
-        img {
-          transform: rotate(90deg);
-          transition: transform 300ms;
-        }
       }
     }
 
@@ -191,11 +194,15 @@
       }
 
       #fr {
-        background-image: url('../assets/img/flags/fr.svg');
+        width: 67px;
+        height: 39px;
+        background: url('../assets/img/sprite.png') -10px -192px;
       }
 
       #en {
-        background-image: url('../assets/img/flags/en.svg');
+        width: 67px;
+        height: 39px;
+        background: url('../assets/img/sprite.png') -192px -101px;
       }
     }
   }
