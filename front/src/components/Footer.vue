@@ -4,13 +4,13 @@
       <div class="content">
         <div id="network">
           <a href="https://github.com/Ravaniss" class="roundedDiv github">
-            <div class="iconSize" id="github"></div>
+            <div id="github"></div>
           </a>
           <a href="https://www.linkedin.com/in/maxime-senechal-088b04a8/#" class="roundedDiv linkedin">
-            <div class="iconSize" id="linkedin"></div>
+            <div id="linkedin"></div>
           </a>
           <a href="https://twitter.com/SENECHAL_Maxime" class="roundedDiv twitter">
-            <div class="iconSize" id="twitter"></div>
+            <div id="twitter"></div>
           </a>
         </div>
       </div>
@@ -98,11 +98,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-
-        .iconSize {
-          height: 16px;
-          width: 16px;
-        }
 
         &:nth-child(2) {
           margin: 0 15px;
@@ -287,18 +282,21 @@
       }
 
       #github {
-        background: url(../assets/img/network/lighter/github.png) no-repeat;
-        background-size: 16px;
+        width: 42px;
+        height: 40px;
+        background: url(../assets/img/sprite.png) -283px -75px;
       }
 
       #linkedin {
-        background: url(../assets/img/network/lighter/linkedin.png) no-repeat;
-        background-size: 16px;
+        width: 25px;
+        height: 22px;
+        background: url(../assets/img/sprite.png) -94px -192px;
       }
 
       #twitter {
-        background: url(../assets/img/network/lighter/twitter.png) no-repeat;
-        background-size: 16px;
+        width: 25px;
+        height: 21px;
+        background: url(../assets/img/sprite.png) -135px -192px;
       }
     }
 
@@ -324,18 +322,21 @@
       }
 
       #github {
-        background: url(../assets/img/network/darker/github.png) no-repeat;
-        background-size: 16px;
+        width: 42px;
+        height: 40px;
+        background: url(../assets/img/sprite.png) -283px -10px;
       }
 
       #linkedin {
-        background: url(../assets/img/network/darker/linkedin.png) no-repeat;
-        background-size: 16px;
+        width: 21px;
+        height: 22px;
+        background: url(../assets/img/sprite.png) -283px -196px;
       }
 
       #twitter {
-        background: url(../assets/img/network/darker/twitter.png) no-repeat;
-        background-size: 16px;
+        width: 25px;
+        height: 21px;
+        background: url(../assets/img/sprite.png) -176px -192px;
       }
     }
 
