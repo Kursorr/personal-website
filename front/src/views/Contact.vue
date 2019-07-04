@@ -4,7 +4,7 @@
       :center="{lat:43.5756, lng:7.000520000000051}"
       :zoom="13"
       map-type-id="terrain"
-      style="width: 100%; height: 400px; z-index:1;"
+      style="width: 100%; height: 500px; z-index:1;"
     >
       <GmapMarker
         :key="index"
@@ -145,7 +145,7 @@
   }
 
   .container.contact {
-    margin-top: 60px;
+    margin-top: 0;
   }
 
   section#message {
