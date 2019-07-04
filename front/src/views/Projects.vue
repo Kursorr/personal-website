@@ -62,7 +62,7 @@
       align-items: center;
       height: 300px;
       width: 100%;
-      background-image: url('../assets/img/linescode.jpg');
+      background-image: url('../assets/img/backgrounds/linescode.jpg');
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
