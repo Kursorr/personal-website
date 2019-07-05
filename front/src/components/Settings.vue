@@ -118,8 +118,6 @@
 
         &:hover {
           cursor: pointer;
-          transform: rotate(90deg);
-          transition: transform 400ms;
         }
       }
     }
