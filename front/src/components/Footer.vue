@@ -3,13 +3,28 @@
     <div class="outContent network">
       <div class="content">
         <div id="network">
-          <a href="https://github.com/Ravaniss" class="roundedDiv github">
+          <a
+            href="https://github.com/Ravaniss"
+            class="roundedDiv github"
+            aria-label="Github"
+            target="_blank"
+            rel="noopener">
             <div id="github"></div>
           </a>
-          <a href="https://www.linkedin.com/in/maxime-senechal-088b04a8/#" class="roundedDiv linkedin">
+          <a
+            href="https://www.linkedin.com/in/maxime-senechal-088b04a8/#"
+            class="roundedDiv linkedin"
+            aria-label="Linkedin"
+            target="_blank"
+            rel="noopener">
             <div id="linkedin"></div>
           </a>
-          <a href="https://twitter.com/SENECHAL_Maxime" class="roundedDiv twitter">
+          <a
+            href="https://twitter.com/SENECHAL_Maxime"
+            class="roundedDiv twitter"
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener">
             <div id="twitter"></div>
           </a>
         </div>
