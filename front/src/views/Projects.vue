@@ -11,12 +11,20 @@
         <div id="projects">
           <ul>
             <li>
+              <figure class="project navy"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample10.jpg" alt="sq-sample10"/>
+                <figcaption>
+                <h2>Qwirk <span>App</span></h2>
+                </figcaption>
+                <router-link to="/project/qwirk"></router-link>
+              </figure>
+            </li>
+            <li>
               <figure class="project red">
                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sq-sample6.jpg" alt="sq-sample6"/>
                 <figcaption>
-                  <h2>Qwirk <span>App</span></h2>
+                  <h2>Instagram <span>App</span></h2>
                 </figcaption>
-                <router-link to="/project/qwirk"></router-link>
+                <router-link to="/project/instagram"></router-link>
               </figure>
             </li>
             <!--
