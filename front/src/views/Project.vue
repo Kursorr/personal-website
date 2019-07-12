@@ -4,9 +4,9 @@
       <div class="outContent">
         <div class="content">
           <section class="titles">
-            <h2>{{ $t(projectId + '.title') }}</h2>
-            <h3>{{ $t(projectId + '.subject') }}</h3>
-            <span>{{ $t(projectId + '.subtitle') }}</span>
+            <h2>{{ $t(`projects[${projectId}].title`) }}</h2>
+            <h3>{{ $t(`projects[${projectId}].subject`) }}</h3>
+            <span>{{ $t(`projects[${projectId}].subtitle`) }}</span>
           </section>
         </div>
       </div>
@@ -28,13 +28,15 @@
 
   @Component
   export default class Project extends Vue {
-    projectId: string = ''
+    projects = ['qwirk', 'instagram']
+    projectId: number = 0
 
     mounted () {
-      if (this.$route.params.name === 'qwirk')
-        this.projectId = 'projects[0]'
-      else if (this.$route.params.name === 'instagram')
-        this.projectId = 'projects[1]'
+      const found = this.projects.find((project) => {
+        return this.$route.params.name === project
+      })
+
+      this.projectId = this.projects.indexOf(found)
     }
   }
 </script>
