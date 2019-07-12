@@ -4,9 +4,9 @@
       <div class="outContent">
         <div class="content">
           <section class="titles">
-            <h2>{{ $t('projects[0].title') }}</h2>
-            <h3>{{ $t('projects[0].subject') }}</h3>
-            <span>{{ $t('projects[0].subtitle') }}</span>
+            <h2>{{ $t(projectId + '.title') }}</h2>
+            <h3>{{ $t(projectId + '.subject') }}</h3>
+            <span>{{ $t(projectId + '.subtitle') }}</span>
           </section>
         </div>
       </div>
@@ -27,7 +27,16 @@
   import { Component, Vue } from 'vue-property-decorator'
 
   @Component
-  export default class Project extends Vue {}
+  export default class Project extends Vue {
+    projectId: string = ''
+
+    mounted () {
+      if (this.$route.params.name === 'qwirk')
+        this.projectId = 'projects[0]'
+      else if (this.$route.params.name === 'instagram')
+        this.projectId = 'projects[1]'
+    }
+  }
 </script>
 
 <style lang="scss">
