@@ -32,7 +32,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "projects" */ './views/Projects.vue')
     },
     {
-      path: '/project/qwirk',
+      path: '/project/:name',
       name: 'project',
       component: () => import(/* webpackChunkName: "project" */ './views/Project.vue')
     },
@@ -46,5 +46,8 @@ export default new Router({
       name: 'contact',
       component: () => import(/* webpackChunkName: "contact" */ './views/Contact.vue')
     }
-  ]
+  ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
