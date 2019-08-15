@@ -36,7 +36,9 @@
         return this.$route.params.name === project
       })
 
-      this.projectId = this.projects.indexOf(found)
+      if (found) {
+        this.projectId = this.projects.indexOf(found)
+      }
     }
   }
 </script>

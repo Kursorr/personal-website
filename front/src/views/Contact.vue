@@ -90,12 +90,13 @@
 <script lang="ts">
   import { Component, Vue } from 'vue-property-decorator'
   import VueRecaptcha from 'vue-recaptcha'
+  import { ComponentOptions } from 'vue'
 
   @Component({
     components: {
       VueRecaptcha
     }
-  })
+  } as ComponentOptions<Contact> )
   export default class Contact extends Vue {
     private form: any = {
       name: '',
@@ -127,10 +128,6 @@
       this.$axios.post('http://localhost:3000/contact', { params: { data: this.form}})
         .then((response: any) => response.data)
         .catch((error: any) => {})
-    }
-
-    test() {
-      console.log('clicked')
     }
   }
 </script>

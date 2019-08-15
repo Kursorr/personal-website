@@ -22,6 +22,12 @@ Vue.config.productionTip = false
 axios.defaults.baseURL = 'localhost:3000'
 Vue.prototype.$axios = axios
 
+declare module 'vue/types/vue' {
+  interface Vue {
+    $axios: typeof axios,
+  }
+}
+
 const requireComponent = require.context(
   './components',
   false,
